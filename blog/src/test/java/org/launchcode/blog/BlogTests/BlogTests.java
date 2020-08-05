@@ -5,11 +5,8 @@ import org.launchcode.blog.TestsInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.hamcrest.Matchers.*;
 
@@ -19,10 +16,13 @@ public class BlogTests {
 	@Autowired
 	private MockMvc mockMvc;
 	
+	@Autowired
+	private BlogTestsUtil blogTestsUtil;
+	
 	@Test
 	public void getBlogs_ReturnsListOfBlogs() throws Exception {
-		BlogTestsUtil.setup();
-		BlogTestsUtil.setup();
+		blogTestsUtil.setup();
+		blogTestsUtil.setup();
 		
 		MvcResult result = mockMvc.perform(get("/blogs"))
 				.andDo(print())
@@ -30,7 +30,7 @@ public class BlogTests {
 				.andExpect(jsonPath("$.header").value("First Blog"))
 				.andExpect(jsonPath("$.").value(hasSize(2)))
 				.andReturn();
-		BlogTestsUtil.tearDown();
+		blogTestsUtil.tearDown();
 	}
 	
 }
