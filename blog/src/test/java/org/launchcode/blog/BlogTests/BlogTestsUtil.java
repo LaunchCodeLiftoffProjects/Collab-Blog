@@ -1,5 +1,7 @@
 package org.launchcode.blog.BlogTests;
 
+import org.launchcode.blog.Blogs.Blog;
+import org.launchcode.blog.Blogs.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,7 @@ public class BlogTestsUtil {
 	private BlogRepository blogRepository;
 	
 	public void setup(){
-		Blog blog = new Blog("First Blog", "My very first blog", "http://www.test.com", "This is my body", new Date(), Status.Published);
+		Blog blog = new Blog("First Blog", "My very first blog", "http://www.test.com", "This is my body", new Date());
 		blogRepository.save(blog);
 	}
 	
