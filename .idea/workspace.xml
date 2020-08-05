@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a9d043c-381c-4c35-a126-c5610f06362c" name="Default Changelist" comment="" />
+    <list default="true" id="1a9d043c-381c-4c35-a126-c5610f06362c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Collab-Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Collab-Blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,7 +38,15 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="java.org.launchcode.blog" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -55,13 +74,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="708" y="395" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1596567135055">
+    <state x="459" y="154" key="#Project_Structure" timestamp="1596639095531">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state x="708" y="395" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/-147.-1057.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1596567135055" />
-    <state x="536" y="321" key="com.intellij.ide.util.TipDialog" timestamp="1596567109751">
+    <state x="459" y="154" key="#Project_Structure/-147.-1057.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1596639095531" />
+    <state x="708" y="395" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1596638098593">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state x="536" y="321" key="com.intellij.ide.util.TipDialog/-147.-1057.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1596567109751" />
+    <state x="708" y="395" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/-147.-1057.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1596638098593" />
+    <state x="347" y="70" key="SettingsEditor" timestamp="1596638915584">
+      <screen x="0" y="23" width="1680" height="972" />
+    </state>
+    <state x="347" y="70" key="SettingsEditor/-147.-1057.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1596638915584" />
+    <state x="536" y="321" key="com.intellij.ide.util.TipDialog" timestamp="1596639070273">
+      <screen x="0" y="23" width="1680" height="972" />
+    </state>
+    <state x="536" y="321" key="com.intellij.ide.util.TipDialog/-147.-1057.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1596639070273" />
   </component>
 </project>
