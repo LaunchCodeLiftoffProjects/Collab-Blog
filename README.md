@@ -19,3 +19,7 @@ Endpoints:
 - GET - return that single blog
 -PUT - Update the blog with new info
 -DELETE - delete this blog by ID
+
+
+MySQL database creation
+docker run -d --env-file ~/.docker/envs/mysql-blog-test.env -p 3308:3306 --name blog-test mysql
