@@ -21,14 +21,15 @@ public class BlogTests {
 	
 	@Test
 	public void getBlogs_ReturnsListOfBlogs() throws Exception {
+		blogTestsUtil.tearDown();
 		blogTestsUtil.setup();
 		blogTestsUtil.setup();
 		
 		MvcResult result = mockMvc.perform(get("/blogs"))
 				.andDo(print())
 				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.header").value("First Blog"))
-				.andExpect(jsonPath("$.").value(hasSize(2)))
+				.andExpect(jsonPath("$[0].header").value("First Blog"))
+				.andExpect(jsonPath("$").value(hasSize(2)))
 				.andReturn();
 		blogTestsUtil.tearDown();
 	}
