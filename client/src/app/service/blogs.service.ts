@@ -15,4 +15,9 @@ export class BlogsService {
     return this.http.get('//localhost:8080/blogs');
   }
 
+  addBlog(blog:any): Observable<any>{
+    return this.http.post('//localhost:8080/blogs', blog)
+  }
+
+
 }
