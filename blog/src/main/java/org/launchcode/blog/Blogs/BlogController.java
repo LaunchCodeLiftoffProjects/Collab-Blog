@@ -1,15 +1,18 @@
 package org.launchcode.blog.Blogs;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class BlogController {
+
+	@Autowired
+	private ObjectMapper objectMapper;
 	
 	@Autowired
 	private BlogRepository blogRepository;
@@ -17,6 +20,12 @@ public class BlogController {
 	@GetMapping("/blogs")
 	public List<Blog> getAllBlogs(){
 		return blogRepository.findAll();
+	}
+
+	@PostMapping("/blogs")
+	public Blog getAllBlogs(@RequestBody String blog1) throws JsonProcessingException {
+		Blog blog = objectMapper.readValue(blog1, Blog.class);
+		return blogRepository.save(blog);
 	}
 	
 }
