@@ -1,19 +1,19 @@
-<form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
 <label>
     Header
-    <input type="text" [formControl] = "Header">
+    <input type="text" formControlName = "header">
 </label>
 <label>
     Subheader
-    <input type="text" [formControl] = "Subheader">
+    <input type="text" formControlName = "subheader">
 </label>
 <label>
     Image
-    <input type="text" [formControl] = "Image">
+    <input type="text" formControlName = "image">
 </label>
 <label>
     Body
-    <input type="text" [formControl] = "Body">
+    <input type="text" formControlName = "body">
 </label>
 <button type="submit">Submit</button>
 </form>
