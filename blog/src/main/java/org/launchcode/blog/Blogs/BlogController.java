@@ -24,7 +24,10 @@ public class BlogController {
 
 	@PostMapping("/blogs")
 	public Blog getAllBlogs(@RequestBody String blog1) throws JsonProcessingException {
+		System.out.println(blog1);
+		Blog blogtwo = new Blog();
 		Blog blog = objectMapper.readValue(blog1, Blog.class);
+		System.out.println(blog.toString());
 		return blogRepository.save(blog);
 	}
 	

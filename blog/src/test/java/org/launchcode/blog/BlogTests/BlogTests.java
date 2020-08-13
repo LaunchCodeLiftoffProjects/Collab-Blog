@@ -36,8 +36,8 @@ public class BlogTests {
 
 	@Test
 	public void fillDatabaseWithBlogs() {
-		Blog blog1 = new Blog("New Header", "New Subheader", "New Image", "New Body", new Date());
-		Blog blog2 = new Blog("Second Header", "New Second Header", "Second image", "Second Body", new Date());
+		Blog blog1 = new Blog("New Header", "New Subheader", "New Image", "New Body");
+		Blog blog2 = new Blog("Second Header", "New Second Header", "Second image", "Second Body");
 		blogRepository.save(blog1);
 		blogRepository.save(blog2);
 	}
@@ -59,7 +59,7 @@ public class BlogTests {
 	@Test
 	public void postBlogs_SavesBlogToDatabase() throws Exception {
 		blogTestsUtil.tearDown();
-		Blog blog1 = new Blog("Our Very First Blog Post", "This is an actual Subheader", "An Actual Image", "This body has things we actually care about", new Date());
+		Blog blog1 = new Blog("Our Very First Blog Post", "This is an actual Subheader", "An Actual Image", "This body has things we actually care about");
 		MvcResult result = mockMvc.perform(post("/blogs").content(objectMapper.writeValueAsString(blog1)))
 				.andDo(print())
 				.andExpect(status().isOk())

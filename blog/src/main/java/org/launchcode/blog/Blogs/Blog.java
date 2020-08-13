@@ -21,12 +21,12 @@ public class Blog {
 	
 	public Blog(){}
 	
-	public Blog(String header, String subheader, String image,String body, Date timestamp){
+	public Blog(String header, String subheader, String image,String body){
 		this.header = header;
 		this.subheader =subheader;
 		this.image = image;
 		this.body = body;
-		this.timestamp = timestamp;
+		this.timestamp = new Date();
 	}
 	
 	public long getId() {
@@ -68,8 +68,18 @@ public class Blog {
 	public Date getTimestamp() {
 		return timestamp;
 	}
+
+
 	
-	public void setTimestamp(Date timestamp) {
-		this.timestamp = timestamp;
+	@Override
+	public String toString() {
+		return "Blog{" +
+				       "id=" + id +
+				       ", header='" + header + '\'' +
+				       ", subheader='" + subheader + '\'' +
+				       ", image='" + image + '\'' +
+				       ", body='" + body + '\'' +
+				       ", timestamp=" + timestamp +
+				       '}';
 	}
 }
