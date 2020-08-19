@@ -68,5 +68,18 @@ public class BlogTests {
 		assertEquals(1, blogRepository.findAll().size());
 		blogTestsUtil.tearDown();
 	}
+
+	@Test
+	public void getBlogById_ReturnsCorrectBlog() throws Exception {
+		blogTestsUtil.tearDown();
+		Blog blog1 = new Blog("Superman", "Batman", "Image of Justice League", "They are the superior super heroes");
+		blogRepository.save(blog1);
+		MvcResult result = mockMvc.perform(get("/blogs/" + blog1.getId()))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect((jsonPath("$.header").value(blog1.getHeader())))
+				.andReturn();
+		blogTestsUtil.tearDown();
+	}
 	
 }

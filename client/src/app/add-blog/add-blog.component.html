@@ -1,21 +1,81 @@
-<form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
-<label>
-    Header
-    <input type="text" formControlName = "header">
-</label>
-<label>
-    Subheader
-    <input type="text" formControlName = "subheader">
-</label>
-<label>
-    Image
-    <input type="text" formControlName = "image">
-</label>
-<label>
-    Body
-    <input type="text" formControlName = "body">
-</label>
-<button type="submit">Submit</button>
-</form>
+<!-- <mat-card>
+    <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+      <mat-card-header>
+        <mat-card-title><h2>Add Blog</h2></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field>
+            <label>
+                Header
+                <input type="text" formControlName = "header">
+            </label>
+        </mat-form-field>
+        <mat-form-field>
+            <label>
+                Subheader
+                <input type="text" formControlName = "subheader">
+            </label>
+        </mat-form-field>
+        <mat-form-field>
+            <label>
+                Image
+                <input type="text" formControlName = "image">
+            </label>
+        </mat-form-field>
+        <mat-form-field>
+            <label>
+                Body
+                <input type="text" formControlName = "body">
+            </label>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class = "but">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+      </mat-card-actions>
+    </form>
+  </mat-card> -->
+    
+<!-- <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+    <label>
+        Header
+        <input type="text" formControlName = "header">
+    </label>
+    <label>
+        Subheader
+        <input type="text" formControlName = "subheader">
+    </label>
+    <label>
+        Image
+        <input type="text" formControlName = "image">
+    </label>
+    <label>
+        Body
+        <input type="text" formControlName = "body">
+    </label>
+    <button type="submit">Submit</button>
+    </form> -->
+
+    <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+        <label>
+            Header
+            <input type="text" formControlName = "header">
+        </label>
+        <label>
+            Subheader
+            <input type="text" formControlName = "subheader">
+        </label>
+        <div>
+            Image
+            <input type="file" accept="image/*" (change)="onFileChanged($event)">
+        </div>
+        <label>
+            Body
+            <input type="text" formControlName = "body">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
 
 

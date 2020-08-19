@@ -14,6 +14,8 @@ export class AddBlogComponent implements OnInit {
   blogForm:FormGroup;
   constructor(private blogService:BlogsService, private fb:FormBuilder) { }
 
+  selectedFile: File
+
   ngOnInit(): void {
     this.reactiveForm();
     
@@ -29,6 +31,11 @@ export class AddBlogComponent implements OnInit {
       image:[''],
       body:['']
     })
+  }
+
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0]
+    this.blogForm.get("image").setValue(this.selectedFile);
   }
 
 }
