@@ -5,7 +5,6 @@ import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json',
     'Authorization': 'my-auth-token',
     'Access-Control-Allow-Origin': '*'
   })
@@ -26,8 +25,14 @@ export class BlogsService {
   }
 
   addBlog(blog:any): Observable<any>{
-    console.log(blog)
-    return this.http.post('//localhost:8080/blogs', blog, httpOptions)
+    const formData = new FormData();
+    formData.append("image", blog.image);
+    delete blog.image;
+    let blogData = JSON.stringify(blog);
+    formData.append("blogData", blogData);
+    console.log(formData.get("image"));
+    console.log(formData.get("blogData"));
+    return this.http.post('//localhost:8080/blogs', blog);
   }
 
 

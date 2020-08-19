@@ -4,8 +4,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -23,12 +26,16 @@ public class BlogController {
 	}
 
 	@PostMapping("/blogs")
-	public Blog getAllBlogs(@RequestBody String blog1) throws JsonProcessingException {
-		System.out.println(blog1);
-		Blog blogtwo = new Blog();
-		Blog blog = objectMapper.readValue(blog1, Blog.class);
-		System.out.println(blog.toString());
+	public Blog getAllBlogs(@RequestPart("blogData") String blogData, @RequestPart("image") MultipartFile image) throws JsonProcessingException {
+		Blog blog = objectMapper.readValue(blogData, Blog.class);
+		System.out.println(image.getOriginalFilename());
+		blog.setTimestamp(new Date());
 		return blogRepository.save(blog);
+	}
+
+	@GetMapping("/blogs/{id}")
+	public Optional<Blog> getBlogById(@PathVariable("id") long id){
+		return blogRepository.findById(id);
 	}
 	
 }

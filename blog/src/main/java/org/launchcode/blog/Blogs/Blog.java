@@ -20,13 +20,12 @@ public class Blog {
 	private Date timestamp;
 	
 	public Blog(){}
-	
-	public Blog(String header, String subheader, String image,String body){
+
+	public Blog(String header, String subheader, String image, String body){
 		this.header = header;
 		this.subheader =subheader;
 		this.image = image;
 		this.body = body;
-		this.timestamp = new Date();
 	}
 	
 	public long getId() {
@@ -67,6 +66,10 @@ public class Blog {
 	
 	public Date getTimestamp() {
 		return timestamp;
+	}
+
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
 	}
 
 
