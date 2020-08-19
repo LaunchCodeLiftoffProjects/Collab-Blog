@@ -32,7 +32,7 @@ export class BlogsService {
     formData.append("blogData", blogData);
     console.log(formData.get("image"));
     console.log(formData.get("blogData"));
-    return this.http.post('//localhost:8080/blogs', blog);
+    return this.http.post('//localhost:8080/blogs', formData);
   }
 
 
