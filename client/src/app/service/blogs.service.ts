@@ -5,6 +5,7 @@ import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
+    'Content-Type': '',
     'Authorization': 'my-auth-token',
     'Access-Control-Allow-Origin': '*'
   })
@@ -30,9 +31,9 @@ export class BlogsService {
     delete blog.image;
     let blogData = JSON.stringify(blog);
     formData.append("blogData", blogData);
-    console.log(formData.get("image"));
+    console.log(formData.get("Image"));
     console.log(formData.get("blogData"));
-    return this.http.post('//localhost:8080/blogs', blog);
+    return this.http.post('//localhost:8080/blogs', formData);
   }
 
 
