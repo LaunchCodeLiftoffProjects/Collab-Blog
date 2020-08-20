@@ -13,12 +13,15 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogListComponent,
-    AddBlogComponent
+    AddBlogComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatListModule,
     MatToolbarModule,
     MatSliderModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 package org.launchcode.blog.Blogs;
 
+import com.amazonaws.services.s3.transfer.model.UploadResult;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.launchcode.blog.S3.S3Service;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -31,12 +33,14 @@ public class BlogController {
 	}
 
 	@PostMapping("/blogs")
-	public Blog getAllBlogs(@RequestPart("blogData") String blogData, @RequestPart("image") MultipartFile image) throws JsonProcessingException {
+	public Blog getAllBlogs(@RequestParam("blogData") String blogData, @RequestPart("image") MultipartFile image) throws JsonProcessingException {
 		Blog blog = objectMapper.readValue(blogData, Blog.class);
-		System.out.println(image.getOriginalFilename());
 		blog.setTimestamp(new Date());
 		try{
-			System.out.println(S3Service.uploadImageToS3(image));
+			UploadResult result = S3Service.uploadImageToS3(image);
+			URL url = S3Service.urlCreationFromAwsUpload(result, image.getOriginalFilename());
+			String urlString = url.toString();
+			blog.setImage(urlString);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -8,6 +8,7 @@ import com.amazonaws.regions.Regions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class S3Config {
@@ -43,6 +44,7 @@ public class S3Config {
 	}
 	
 	@Bean(name = "awsS3AudioBucket")
+	@Primary
 	public String getAwsS3AudioBucket() {
 		return awsS3AudioBucket;
 	}
