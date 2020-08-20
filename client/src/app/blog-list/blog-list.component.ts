@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from '../service/blogs.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog-list',
@@ -10,7 +11,7 @@ export class BlogListComponent implements OnInit {
 
   blogs: Array<any>;
 
-  constructor(private blogservice: BlogsService){ }
+  constructor(private blogservice: BlogsService, private router: Router){ }
 
   ngOnInit(): void {
     this.blogservice.getAll().subscribe(

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import {BlogsService} from '../service/blogs.service'
 import { FormControl, FormGroup, Validators, FormBuilder, } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-blog',
@@ -12,7 +13,7 @@ export class AddBlogComponent implements OnInit {
   
 
   blogForm:FormGroup;
-  constructor(private blogService:BlogsService, private fb:FormBuilder) { }
+  constructor(private blogService:BlogsService, private fb:FormBuilder, private router:Router) { }
 
   selectedFile: File
 
@@ -21,7 +22,11 @@ export class AddBlogComponent implements OnInit {
     
   }
   createBlog(blog:any){
-    this.blogService.addBlog(blog).subscribe()
+    this.router.navigate(["blog-list"])
+    this.blogService.addBlog(blog).subscribe(
+      response => {
+      }
+    )
   }
 
   reactiveForm(){

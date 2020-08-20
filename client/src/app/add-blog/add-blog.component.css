@@ -1,10 +1,7 @@
-mat-card {
-    max-width: 500px;
-    min-height: 500px;
-    text-align: center;
-}
-.but{
-    position: absolute;
-    right: 225px;
-    bottom: 50px;
-}
+.add-blog {
+    max-width: 400px;
+  }
+  
+  .add-blog-image {
+    background-size: cover;
+  }
