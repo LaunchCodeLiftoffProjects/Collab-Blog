@@ -6,13 +6,13 @@ import org.launchcode.blog.Blogs.Blog;
 import org.launchcode.blog.Blogs.BlogRepository;
 import org.launchcode.blog.TestsInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 import java.util.Date;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.hamcrest.Matchers.*;
@@ -36,6 +36,7 @@ public class BlogTests {
 
 	@Test
 	public void fillDatabaseWithBlogs() {
+		blogTestsUtil.tearDown();
 		Blog blog1 = new Blog("New Header", "New Subheader", "New Image", "New Body");
 		Blog blog2 = new Blog("Second Header", "New Second Header", "Second image", "Second Body");
 		blogRepository.save(blog1);
@@ -60,7 +61,8 @@ public class BlogTests {
 	public void postBlogs_SavesBlogToDatabase() throws Exception {
 		blogTestsUtil.tearDown();
 		Blog blog1 = new Blog("Our Very First Blog Post", "This is an actual Subheader", "An Actual Image", "This body has things we actually care about");
-		MvcResult result = mockMvc.perform(post("/blogs").content(objectMapper.writeValueAsString(blog1)))
+		MockMultipartFile firstFile = new MockMultipartFile("image", "filename.txt", "text/plain", "some xml".getBytes());
+		MvcResult result = mockMvc.perform(multipart("/blogs").file(firstFile).param("blogData", objectMapper.writeValueAsString(blog1)))
 				.andDo(print())
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$.header").value("Our Very First Blog Post"))
@@ -80,6 +82,13 @@ public class BlogTests {
 				.andExpect((jsonPath("$.header").value(blog1.getHeader())))
 				.andReturn();
 		blogTestsUtil.tearDown();
+	}
+
+	@Test
+	void whenDeleteAllFromClientRepository_thenRepositoryShouldBeEmpty(){
+		blogTestsUtil.setup();
+		blogTestsUtil.tearDown();
+		assertEquals(0, blogRepository.findAll().size());
 	}
 	
 }

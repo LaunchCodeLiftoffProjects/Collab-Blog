@@ -12,10 +12,12 @@ import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
 import com.amazonaws.services.s3.transfer.Upload;
 import com.amazonaws.services.s3.transfer.model.UploadResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.net.URL;
 
 
 @Component
@@ -29,7 +31,7 @@ public class S3Service {
 		this.amazonS3 = AmazonS3ClientBuilder.standard().withCredentials(awsCredentialsProvider).withRegion(awsRegion.getName()).build();
 		this.imageBucket = imageBucket;
 	}
-	
+
 	public UploadResult uploadImageToS3(MultipartFile file) throws IOException, InterruptedException {
 		ObjectMetadata omd = new ObjectMetadata();
 		omd.setContentLength(file.getSize());
@@ -37,5 +39,9 @@ public class S3Service {
 		PutObjectRequest request = new PutObjectRequest(this.imageBucket, file.getOriginalFilename(), file.getInputStream(), omd).withCannedAcl(CannedAccessControlList.PublicRead);
 		Upload upload = tm.upload(request);
 		return upload.waitForUploadResult();
+	}
+
+	public URL urlCreationFromAwsUpload(UploadResult result, String fileName){
+		return this.amazonS3.getUrl(result.getBucketName(), fileName);
 	}
 }
