@@ -1,3 +1,4 @@
+<!-- <mat-card>
     <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
         <mat-label>
             Header
@@ -17,41 +18,20 @@
         </mat-label>
         <button type="submit">Submit</button>
     </form>
+</mat-card> -->
 
-<!-- <div [formGroup]="blogForm">
-  <p>
-    <mat-form-field formControlName="header" appearance="legacy">
-      <mat-label>Header</mat-label>
-      <input type="text">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field formControlName="subheader" appearance="standard">
-      <mat-label>Subheader</mat-label>
-      <input type="text">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="fill">
-      <mat-label>Image</mat-label>
-      <input type="file" accept="image/*" (change)="onFileChanged($event)">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field formControlName="body" appearance="outline">
-      <mat-label>Body</mat-label>
-      <input type="text">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  </div> -->
-  
+
+
+    <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+        <div>Image:</div><br>
+        <input type="file" accept="image/*" (change)="onFileChanged($event)"><br>
+        <mat-label>Header:</mat-label><br>
+        <input type="text" formControlName = "header"><br>
+        <mat-label>Subheader:</mat-label><br>
+        <input type="text" formControlName = "subheader"><br>
+        <mat-label>Body:</mat-label><br>
+        <input type="text" formControlName = "body"><br>
+        <button type="submit">Submit:</button>
+    </form>
 
 
