@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
-import {BlogsService} from '../service/blogs.service'
+import { HttpClient } from '@angular/common/http';
+import { BlogsService } from '../service/blogs.service';
 import { FormControl, FormGroup, Validators, FormBuilder, } from '@angular/forms';
 import { Router } from '@angular/router';
 
