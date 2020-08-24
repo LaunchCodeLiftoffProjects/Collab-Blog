@@ -19,19 +19,38 @@
         <button type="submit">Submit</button>
     </form>
 </mat-card> -->
-
-
-
-    <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
-        <div>Image:</div><br>
-        <input type="file" accept="image/*" (change)="onFileChanged($event)"><br>
-        <mat-label>Header:</mat-label><br>
-        <input type="text" formControlName = "header"><br>
-        <mat-label>Subheader:</mat-label><br>
-        <input type="text" formControlName = "subheader"><br>
-        <mat-label>Body:</mat-label><br>
-        <input type="text" formControlName = "body"><br>
-        <button type="submit">Submit:</button>
-    </form>
-
-
+<div class = "d-flex justify-content-center">
+<div class="card text-center" style="width: 19rem;">
+    <div class="card-header">
+        Add-Blog
+      </div>
+      <br>
+<form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+<mat-form-field appearance="fill">
+    <mat-label>Header:</mat-label><br>
+    <input matInput type="text" formControlName="header"><br>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Subheader:</mat-label><br>
+    <input matInput type="text" formControlName="subheader">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Body:</mat-label><br>
+    <input matInput type="text" formControlName="body"><br>
+</mat-form-field>
+<br>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+       </div>
+       <div class="custom-file">
+       <input type="file" class="custom-file-input" id="inputGroupFile01">
+       <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+       <!-- <input type="file" class= "accept="image/*" (change)="onFileChanged($event)"><br> -->
+    </div>
+</div>
+<button type="submit" class = "btn btn-primary">Submit:</button>
+</form>
+</div>
+</div>
