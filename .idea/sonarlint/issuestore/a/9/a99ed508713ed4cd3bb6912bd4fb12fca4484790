@@ -1,10 +1,0 @@
-
-X
-java:S1854";Remove this useless assignment to local variable "blogtwo".(œýØ®8¼¬É«¾.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(¾èŽÀ8€ÅÇ«¾.
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ú¨‰‘ýÿÿÿÿ
-U
-java:S1854"8Remove this useless assignment to local variable "blog".(Âý«÷8€¸Õª¾.
-I
-java:S1481",Remove this unused "blogtwo" local variable.(œýØ®8¼¬É«¾.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(ßâóúúÿÿÿÿ8ë’£«¾.
