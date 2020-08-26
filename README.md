@@ -23,3 +23,7 @@ Endpoints:
 
 MySQL database creation
 docker run -d --env-file ~/.docker/envs/mysql-blog-test.env -p 3308:3306 --name blog-test mysql
+
+
+Steps: 
+Install Bootstrap and npm in terminal - https://www.techiediaries.com/angular-bootstrap/

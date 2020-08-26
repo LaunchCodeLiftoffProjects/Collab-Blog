@@ -1,56 +1,41 @@
-<!-- <mat-card>
-    <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
-        <mat-label>
-            Header
-            <input type="text" formControlName = "header">
-        </mat-label>
-        <mat-label>
-            Subheader
-            <input type="text" formControlName = "subheader">
-        </mat-label>
-        <div>
-            Image
-            <input type="file" accept="image/*" (change)="onFileChanged($event)">
-        </div>
-        <mat-label>
-            Body
-            <input type="text" formControlName = "body">
-        </mat-label>
-        <button type="submit">Submit</button>
-    </form>
-</mat-card> -->
-<div class = "d-flex justify-content-center">
-<div class="card text-center" style="width: 19rem;">
-    <div class="card-header">
-        Add-Blog
-      </div>
-      <br>
-<form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
-<mat-form-field appearance="fill">
-    <mat-label>Header:</mat-label><br>
-    <input matInput type="text" formControlName="header"><br>
-</mat-form-field>
-<br>
-<mat-form-field appearance="fill">
-    <mat-label>Subheader:</mat-label><br>
-    <input matInput type="text" formControlName="subheader">
-</mat-form-field>
-<br>
-<mat-form-field appearance="fill">
-    <mat-label>Body:</mat-label><br>
-    <input matInput type="text" formControlName="body"><br>
-</mat-form-field>
-<br>
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-       </div>
-       <div class="custom-file">
-       <input type="file" class="custom-file-input" id="inputGroupFile01">
-       <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-       <!-- <input type="file" class= "accept="image/*" (change)="onFileChanged($event)"><br> -->
+
+<div class="d-flex justify-content-center">
+    <div class="card" style="width: 50rem;">
+        <img src="https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/anatomy-of-a-blog-post-deconstructed-open-graph.jpg" class="card-img-top" alt="...">
+        <br/>
+        <h1 class="text-center">Add your blog!</h1>
+        <br>
+        <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+            <div class="form-group container">
+                <label for="header">Header</label>
+                <input type="text" class="form-control" id="header" placeholder="My Unconventional Path to Tech" formControlName="header">
+                <br/>
+                <br/>
+                <label for="subheader">Subheader</label>
+                <input type="text" class="form-control" id="subheader" placeholder="There are many paths to becoming an engineer" formControlName="subheader">
+                <br/>
+                <br/>
+                <label for="body">Body</label>
+                <textarea class="form-control" id="body" rows="15" formControlName="Body"></textarea>
+                <br/>
+                <br/>
+                <div class="input-group">
+                    <img src="https://image.flaticon.com/icons/svg/2878/2878855.svg" class="btn btn-circle btn-xl btn-outline-secondary" alt="...">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input"id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" accept="image/*" (change)="onFileChanged($event)"><br>
+                        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-info">Submit:</button>
+                </div>
+              </div>
+            <br/>
+            <br/>
+            <br/>
+        </form>
     </div>
 </div>
-<button type="submit" class = "btn btn-primary">Submit:</button>
-</form>
-</div>
-</div>
+<br/>
+<br/>
+<br/>
