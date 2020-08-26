@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a9d043c-381c-4c35-a126-c5610f06362c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/99e7e25db19f5324e2fa9b104035b85bd65a9b27" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/99e7e25db19f5324e2fa9b104035b85bd65a9b27" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d78c645fd21f63befe0ad2dffe17375cadf97798" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d78c645fd21f63befe0ad2dffe17375cadf97798" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/test/java/org/launchcode/blog/BlogTests/BlogTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/test/java/org/launchcode/blog/BlogTests/BlogTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/test/java/org/launchcode/blog/BlogTests/BlogTestsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/test/java/org/launchcode/blog/BlogTests/BlogTestsUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/add-blog/add-blog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/add-blog/add-blog.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/add-blog/add-blog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/add-blog/add-blog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/service/blogs.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/service/blogs.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.ts" afterDir="false" />
-    </list>
+    <list default="true" id="1a9d043c-381c-4c35-a126-c5610f06362c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/blog/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,23 +26,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/Blog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="675">
               <caret line="67" selection-start-line="67" selection-end-line="70" />
               <folding>
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1198#1199#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/BlogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            <state relative-caret-position="90">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -67,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/src/test/java/org/launchcode/blog/BlogTests/BlogTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="61" column="153" selection-start-line="61" selection-start-column="153" selection-end-line="61" selection-end-column="153" />
+            <state relative-caret-position="607">
+              <caret line="62" column="153" selection-start-line="62" selection-start-column="153" selection-end-line="62" selection-end-column="153" />
             </state>
           </provider>
         </entry>
@@ -133,8 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,7 +237,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Course" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -289,6 +284,10 @@
         <env name="DB_USER" value="blog-test-user" />
         <env name="DB_PASSWORD" value="launchcode" />
         <env name="DB_NAME" value="blog-test" />
+        <env name="S3_ACCESS" value="AKIAJH5WQFWAXUBNQNSA" />
+        <env name="S3_SECRET" value="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" />
+        <env name="S3_REGION" value="us-east-1" />
+        <env name="S3_BUCKET" value="launchcode-blog-images" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="org.launchcode.blog.BlogApplication" />
       <module name="blog" />
@@ -370,10 +369,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1792" height="1066" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25358167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2076659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -455,19 +453,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/Blog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="675">
           <caret line="67" selection-start-line="67" selection-end-line="70" />
           <folding>
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/src/test/java/org/launchcode/blog/BlogTests/BlogTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="61" column="153" selection-start-line="61" selection-start-column="153" selection-end-line="61" selection-end-column="153" />
+        <state relative-caret-position="607">
+          <caret line="62" column="153" selection-start-line="62" selection-start-column="153" selection-end-line="62" selection-end-column="153" />
         </state>
       </provider>
     </entry>
@@ -480,8 +477,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/src/main/java/org/launchcode/blog/Blogs/BlogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+        <state relative-caret-position="90">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
