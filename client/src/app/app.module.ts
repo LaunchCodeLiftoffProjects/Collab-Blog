@@ -15,7 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
