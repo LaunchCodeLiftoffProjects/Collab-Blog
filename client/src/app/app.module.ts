@@ -17,11 +17,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms'
-=======
->>>>>>> 44c4987538795d74f17dda05cfff89169d04c252
 
 @NgModule({
   declarations: [
@@ -44,13 +40,8 @@ import { FormsModule } from '@angular/forms'
     MatSliderModule,
     MatMenuModule,
     MatFormFieldModule,
-<<<<<<< HEAD
     BrowserAnimationsModule,
     FormsModule,
-=======
-    FormsModule,
-    BrowserAnimationsModule
->>>>>>> 44c4987538795d74f17dda05cfff89169d04c252
   ],
   providers: [],
   bootstrap: [AppComponent]
