@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -20,6 +20,18 @@ export class BlogsService {
   constructor(
     private http:HttpClient
   ) { }
+
+  login(username:string,password:string){
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    return this.http.get("http://localhost:8080/",{headers,responseType: 'text' as 'json'})
+  }
+  
+    getUsers() {
+      let username='johndw'
+      let password='jt143'
+      const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+     return  this.http.get("http://localhost:8080/getUsers",{headers});
+  }
 
   getAll(): Observable<any> {
     return this.http.get('//localhost:8080/blogs');
