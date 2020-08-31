@@ -1,0 +1,53 @@
+<!-- <div class="background-wrap">
+    <div class="container"></div>
+  </div>
+ 
+  <form id="accesspanel" action="">
+    <h1 id="litheader">LaunchCode Blogs</h1>
+    <div class="inset">
+      <p>
+        <input type="text" name="username" [(ngModel)]="username" id="email" placeholder="username">
+      </p>
+      <p>
+        <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="password">
+      </p>
+    </div>
+    <p class="p-container">
+      <input type="submit" name="Login" id="go" value="Login" (click)="doLogin()">
+    </p>
+  </form> -->
+
+  <body>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign in</h3>
+                </div>
+                <div class="card-body">
+                    <form id="accesspanel" action="">
+                        <div class="inset">
+                          <p>
+                            <input type="text" class = "form-control" name="username" [(ngModel)]="username" id="email" placeholder="username">
+                          </p>
+                          <p>
+                            <input type="password" class = "form-control" name="password" [(ngModel)]="password" id="password" placeholder="password">
+                          </p>
+                        </div>
+                        <div class="form-group">
+                          <input type="submit" name="Login" id="go" value="Login" class = "btn float-right login_btn" (click)="doLogin()">
+                        </div>
+                      </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
