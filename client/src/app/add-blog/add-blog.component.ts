@@ -22,9 +22,10 @@ export class AddBlogComponent implements OnInit {
     
   }
   createBlog(blog:any){
-    this.router.navigate(["blog-list"])
     this.blogService.addBlog(blog).subscribe(
       response => {
+        console.log(response)
+        this.router.navigate(["blog-list"])
       }
     )
   }

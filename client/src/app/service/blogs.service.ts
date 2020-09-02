@@ -26,15 +26,14 @@ export class BlogsService {
   }
 
   addBlog(blog:any): Observable<any>{
-    const formData = new FormData();
-    formData.append("image", blog.image);
-    delete blog.image;
-    let blogData = JSON.stringify(blog);
-    formData.append("blogData", blogData);
-    console.log(formData.get("Image"));
-    console.log(formData.get("blogData"));
-    return this.http.post('//localhost:8080/blogs', formData);
-  }
+  
+      const formData = new FormData();
+      formData.append("image", blog.image);
+      delete blog.image;
+      let blogData = JSON.stringify(blog);
+      formData.append("blogData", blogData);
+      return this.http.post('//localhost:8080/blogs', formData);
+    }
 
 
 }
