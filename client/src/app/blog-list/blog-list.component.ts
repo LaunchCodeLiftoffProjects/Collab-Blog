@@ -14,11 +14,11 @@ export class BlogListComponent implements OnInit {
   constructor(private blogservice: BlogsService, private router: Router){ }
 
   ngOnInit(): void {
-    this.blogservice.getAll().subscribe(
-      data => { this.blogs = data
-        console.log(this.blogs);
-      }
-    );
-  }
+      this.blogservice.getAll().subscribe(
+        data => { this.blogs = data
+          console.log(this.blogs);
+        }
+      );
+    }
 
 }

@@ -21,23 +21,14 @@ export class BlogsService {
     private http:HttpClient
   ) { }
 
-  login(username:string,password:string){
-    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-    return this.http.get("http://localhost:8080/",{headers,responseType: 'text' as 'json'})
-  }
-  
-    getUsers() {
-      let username='johndw'
-      let password='jt143'
-      const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-     return  this.http.get("http://localhost:8080/getUsers",{headers});
-  }
-
   getAll(): Observable<any> {
     return this.http.get('//localhost:8080/blogs');
   }
 
   addBlog(blog:any): Observable<any>{
+    let username = 'johndw';
+    let password = 'jt143';
+    const headers = new HttpHeaders({ Authorization: 'Basic' + btoa(username + ':' + password)})
     const formData = new FormData();
     formData.append("image", blog.image);
     delete blog.image;
@@ -45,7 +36,7 @@ export class BlogsService {
     formData.append("blogData", blogData);
     console.log(formData.get("Image"));
     console.log(formData.get("blogData"));
-    return this.http.post('//localhost:8080/blogs', formData);
+    return this.http.post('//localhost:8080/blogs', formData, {headers});
   }
 
 

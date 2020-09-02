@@ -3,7 +3,6 @@ package org.launchcode.blog.Blogs;
 import com.amazonaws.services.s3.transfer.model.UploadResult;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.launchcode.blog.Authentication.User;
 import org.launchcode.blog.S3.S3Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +13,6 @@ import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -29,19 +26,6 @@ public class BlogController {
 	
 	@Autowired
 	private S3Service S3Service;
-
-
-	@GetMapping("/")
-	public String login(){
-		return "authenticated successfully" ;
-	}
-
-	@GetMapping("/getUsers")
-	public List<User> getUsers(){
-		return Stream.of(new User(108,"Santosh","santosh@gmail.com","9087654321"),
-				new User(101,"Basant","basant@gmail.com","8867101121")).
-				collect(Collectors.toList());
-	}
 	
 	@GetMapping("/blogs")
 	public List<Blog> getAllBlogs(){
