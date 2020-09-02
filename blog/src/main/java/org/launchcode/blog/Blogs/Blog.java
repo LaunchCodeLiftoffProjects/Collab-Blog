@@ -1,10 +1,7 @@
 package org.launchcode.blog.Blogs;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -16,6 +13,7 @@ public class Blog {
 	private String header;
 	private String subheader;
 	private String image;
+	@Column(length = 10000)
 	private String body;
 	private Date timestamp;
 	
