@@ -17,7 +17,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { LoginComponent } from './login/login.component';
     BlogListComponent,
     AddBlogComponent,
     NavbarComponent,
-    LoginComponent
+    
   ],
   imports: [
     BrowserModule,
