@@ -39,7 +39,7 @@ export class BlogsService {
 
   addBlog(blog:any): Observable<any>{
       let username = 'johndw';
-      let password = 'johndw'
+      let password = 'jt143'
       const headers = new HttpHeaders({ Authorization: 'Basic' + btoa(username + ':' + password)})
       const formData = new FormData();
       formData.append("image", blog.image);
