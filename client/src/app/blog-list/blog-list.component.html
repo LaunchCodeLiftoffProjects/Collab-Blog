@@ -1,12 +1,23 @@
-<h2>Blog List here</h2>
-
-<div *ngFor="let blog of blogs">
-    <img src="{{blog.image}}"/>
-    {{blog.header}}
-    {{blog.subheader}}
-    {{blog.body}}
-    {{blog.timestamp}}
+<br/>
+<br/>
+<div class="d-flex justify-content-center">
+    <h1>Your Blogs</h1>
 </div>
-<!-- <router-outlet></router-outlet> -->
-
+<br/>
+<br/>
+<div class="row row-cols-1 row-cols-md-3">
+    <div *ngFor="let blog of blogs">
+    <div class="col mb-4">
+      <div class="card" >
+        <img src="{{blog.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{blog.header}}</h2>
+          <div style="height: 15rem;" class="overflow-auto">
+          {{blog.body}}
+          </div>
+          <p class="card-text"><small class="text-muted">{{blog.timestamp}}</small></p>
+        </div>
+      </div>
+      </div>
+    </div>
 

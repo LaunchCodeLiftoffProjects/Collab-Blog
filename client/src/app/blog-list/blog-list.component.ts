@@ -19,6 +19,6 @@ export class BlogListComponent implements OnInit {
           console.log(this.blogs);
         }
       );
-    }
+     }
 
 }
