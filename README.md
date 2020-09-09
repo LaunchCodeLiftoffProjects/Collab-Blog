@@ -1,4 +1,4 @@
-![LaunchCode](./images/LaunchCode_ltblue%20copy.png)
+![LaunchCode](./blog/images/LaunchCode_ltblue%20copy.png)
 # LaunchCode's Collab Blog
 #### Note: In order to get the most out of this project, read this README completely.
 
