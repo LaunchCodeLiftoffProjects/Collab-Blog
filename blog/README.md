@@ -17,34 +17,27 @@ Angular, Spring Boot, and MySQL.
 You are going to help us build this project! We have written many [user stories](https://education.launchcode.org/liftoff/modules/project/user-stories.html?highlight=user%20story)
 that you will help us complete. So first, let's give you a lay of the land. 
 1. Navigate to [Issues](https://github.com/LaunchCodeLiftoffProjects/Collab-Blog/issues). There you will see 
+a few labels that we will use to give you an idea of what to expect with each Issue:
+- Picture of all the labels
 
-Left off here
-**** 
+2. Read through all the issues to get a good idea of what you'd like to 
+tackle based on your interest and skillset. For your first contribution, we recommend you
+trying out a 'good first issue' tag. 
+3. Reach out to John or Nick through slack (link to each of our profiles) letting us know
+that you'd like to start working on it. 
+4. We will assign you the task and you can begin working on it. 
 
-
-Models: 
-Blog - Header, subheader, image (link to S3 bucket that it gets placed in), body, timestamp, status (published or draft), OneToMany with Comments
-
-Comments - Timestamp, ManyToOne with Blog, body
-
-
-Endpoints:
-
-"/blogs"
-
--GET - return all blogs owned by that user
--POST - create a new blog
-
-/blogs/{id}
-
-- GET - return that single blog
--PUT - Update the blog with new info
--DELETE - delete this blog by ID
+## How to get started
+You'll need to set up your computer locally in order to run the app on your own. 
+Here are the steps: 
+1. https://www.techiediaries.com/angular-bootstrap/
+2. MySQL database creation: docker run -d --env-file ~/.docker/envs/mysql-blog-test.env -p 3308:3306 --name blog-test mysql
 
 
-MySQL database creation
-docker run -d --env-file ~/.docker/envs/mysql-blog-test.env -p 3308:3306 --name blog-test mysql
+## Community and Contributing
+Jump into our Slack! There you will be able to connect with other LaunchCoders
+and work through these challenges together. We encourage you to find a team of people to work with on these 
+features. 
 
+Read our Contributing guidelines: (*insert contiribution guidelines)
 
-Steps: 
-Install Bootstrap and npm in terminal - https://www.techiediaries.com/angular-bootstrap/
