@@ -113,17 +113,15 @@ Note: If your project is not indexing, you can trouble shoot with these steps. W
 
 For each environment variable, type in your value for each of the keys. For example, if you followed along with the above steps, your configuration will look something like this: 
 
-| Syntax      | Description |
+| Name       | Value     |
 | ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| DB_HOST      | localhost      |
+| DB_PORT      | 3308      |
+| DB_NAME      | collab-blog      |
+| DB_USER      | collab-blog     |
 
-| Name | Value|
-|---|---|
-|DB_HOST|localhost|
-|DB_PORT|3308|
-|DB_NAME|collab-blog|
-|DB_USER|collab-blog|
+
+
 Etc. Note: This part is a little tricky so reach out to Nick and John if you are having any difficulty getting your local environment configured. 
 
 <h3 style="text-align: center;">Running Your Project</h3>
