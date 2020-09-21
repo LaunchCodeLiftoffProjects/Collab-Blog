@@ -119,6 +119,11 @@ For each environment variable, type in your value for each of the keys. For exam
 | DB_PORT      | 3308      |
 | DB_NAME      | collab-blog      |
 | DB_USER      | collab-blog     |
+| DB_PASSWORD      | your password      |
+| S3_SECRET      | your AWS secret key      |
+| S3_ACCESS     | your AWS access key     |
+| S3_REGION    | your AWS region     |
+| S3_BUCKET    | your AWS bucked     |
 
 
 
