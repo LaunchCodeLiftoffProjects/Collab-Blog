@@ -68,25 +68,39 @@ You're making progress! Now let's get you set up locally so that you can start c
 ```
 Note: If your project is not indexing, you can trouble shoot with these steps. When it says Maven import detected, select import. You can alternatively open the project at pom.xml
 ```
+
+
 <h3 style="text-align: center;">Java and MySQL Setup</h3>
-3. Click setup Java JDK and choose Java 13
-4. Open MySQL Workbench. You can view this video for a helpful walkthrough of a similar project: [Setting up a Persistent Database](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html)
-5. Create a new connection. Make sure to name your connection **localhost**
-6. Create a schema called collab_blog
-7. Create a new user collab_blog and a password you can remember for this user. 
+
+
+1. Click setup Java JDK and choose Java 13
+2.  Open MySQL Workbench. You can view this video for a helpful walkthrough of a similar project: [Setting up a Persistent Database](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html)
+3.  Create a new connection. Make sure to name your connection **localhost**
+4.  Create a schema called collab_blog
+5.  Create a new user collab_blog and a password you can remember for this use
+ 
+
 <h3 style="text-align: center;">Angular Setup</h3>
-8. Nick and John will send you AWS S3 credentials. Reach out to them if you have not yet. 
-9. Open Visual Studio Code
-10. Open a terminal in VS Code and navigate to Collar-Blog/client. This is where your angular app will live. 
-12.  Type ng serve. You should see the angular app successfully compiling to localhost:4200. 
+
+
+1. Nick and John will send you AWS S3 credentials. Reach out to them if you have not yet. 
+2. Open Visual Studio Code
+3. Open a terminal in VS Code and navigate to Collar-Blog/client. This is where your angular app will live. 
+4. Type ng serve. You should see the angular app successfully compiling to localhost:4200. 
+
+
 ```
  Troubleshooting, You may need to type npm install --save-devkit/build-angular if you are getting an error
 ```
+
+
 <h3 style="text-align: center;">Configuration</h3>
-13. In IntelliJ, click on Add Configurations
-14. On the left side, clickT**Templates**, then **Application**.
-15. In the Environment Variables Section, add your environment variables
-16. You'll have 9 env variables: 
+
+
+1. In IntelliJ, click on Add Configurations
+2. On the left side, clickT**Templates**, then **Application**.
+3. In the Environment Variables Section, add your environment variables
+4. You'll have 9 env variables: 
 	- DB_PORT
 	- DB_HOST
 	- DB_NAME
@@ -100,7 +114,7 @@ Note: If your project is not indexing, you can trouble shoot with these steps. W
 For each environment variable, type in your value for each of the keys. For example, if you followed along with the above steps, your configuration will look something like this: 
 
 | Name | Value|
-|-------|--------|
+|---|---|
 |DB_HOST|localhost|
 |DB_PORT|3308|
 |DB_NAME|collab-blog|
@@ -108,6 +122,8 @@ For each environment variable, type in your value for each of the keys. For exam
 Etc. Note: This part is a little tricky so reach out to Nick and John if you are having any difficulty getting your local environment configured. 
 
 <h3 style="text-align: center;">Running Your Project</h3>
+
+
 1. If you haven't already, open a terminal in VS Code and navigate to Collar-Blog/client. This is where your angular app will live. Type ng serve. You should see the angular app successfully compiling to localhost:4200. 
 2. In IntelliJ, run the main application with Spring Boot Run. 
 
