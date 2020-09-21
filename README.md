@@ -113,6 +113,11 @@ Note: If your project is not indexing, you can trouble shoot with these steps. W
 
 For each environment variable, type in your value for each of the keys. For example, if you followed along with the above steps, your configuration will look something like this: 
 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 | Name | Value|
 |---|---|
 |DB_HOST|localhost|
