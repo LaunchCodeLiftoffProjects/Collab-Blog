@@ -18,6 +18,8 @@ Angular, Spring Boot, and MySQL.
 
 
 <h2 style="text-align: center;">Your Task</h2>
+
+
 You are going to help us build this project! We have written many [user stories](https://education.launchcode.org/liftoff/modules/project/user-stories.html?highlight=user%20story) that you will help us complete. So first, let's give you a lay of the land. 
 
 
@@ -59,12 +61,17 @@ You are welcome to use any code editor that you prefer, but we highly recommend 
 ****
 
 <h2 style="text-align: center;">Steps To Get Set Up Locally</h2>
+
+
 You're making progress! Now let's get you set up locally so that you can start coding. **Make sure to follow these steps in order.**
 
 <h3 style="text-align: center;">Github Setup</h3>
 
+
 1. Fork this repository (in the top right corner)
 2. Clone and open the project in IntelliJ
+
+
 ```
 Note: If your project is not indexing, you can trouble shoot with these steps. When it says Maven import detected, select import. You can alternatively open the project at pom.xml
 ```
@@ -98,7 +105,7 @@ Note: If your project is not indexing, you can trouble shoot with these steps. W
 
 
 1. In IntelliJ, click on Add Configurations
-2. On the left side, clickT**Templates**, then **Application**.
+2. On the left side, click **Templates**, then **Application**.
 3. In the Environment Variables Section, add your environment variables
 4. You'll have 9 env variables: 
 	- DB_PORT
