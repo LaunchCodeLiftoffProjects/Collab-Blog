@@ -129,8 +129,8 @@ For each environment variable, type in your value for each of the keys. For exam
 | DB_PASSWORD      | your password      |
 | S3_SECRET      | your AWS secret key      |
 | S3_ACCESS     | your AWS access key     |
-| S3_REGION    | your AWS region     |
-| S3_BUCKET    | your AWS bucked     |
+| S3_REGION    | us-east-1    |
+| S3_BUCKET    | launchcode-blog-images     |
 
 
 
