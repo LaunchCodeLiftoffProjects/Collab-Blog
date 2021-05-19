@@ -4,6 +4,7 @@ import { AddBlogComponent } from './add-blog/add-blog.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 
 const routes: Routes = [
+  {path: "", component: BlogListComponent},
   {path: "blog-list", component: BlogListComponent },
   {path: "add-blog", component: AddBlogComponent },
 ];
