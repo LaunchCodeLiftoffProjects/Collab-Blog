@@ -7,7 +7,7 @@
 
 
 <h2 style="text-align: center;">About </h2>
-LaunchCode provides and inclusive and supportive community to help get you
+LaunchCode provides an inclusive and supportive community to help get you
 started on your first large open source project. 
 
 This project is called Collab-Blog, and is a blog site where fellow LaunchCoders can
