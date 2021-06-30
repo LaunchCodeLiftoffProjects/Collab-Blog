@@ -49,6 +49,7 @@ We're here to help. If you're one of our students who completed CoderGirl's Web 
 - [Terminal](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-terminal.html)
 - [MySQL with MySQL Workbench](https://education.launchcode.org/java-web-development/appendices/sql-install.html)
 - [Java](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/index.html)
+- [Angular](https://education.launchcode.org/intro-to-professional-web-dev/chapters/angular-lsn1/file-structure.html#installing-angular)
 
 #### Optional Installations
 You are welcome to use any code editor that you prefer, but we highly recommend you use Visual Studio Code when working with Angular and IntelliJ when working with Spring Boot. 
@@ -128,6 +129,7 @@ Etc. Note: This part is a little tricky so reach out to Rachel and John if you a
 
 1. Open Visual Studio Code
 2. Open a terminal in VS Code and navigate to Collar-Blog/client. This is where your angular app will live. 
+3.  Make sure Angular is installed in your project by typing ng version.
 3. Type ng serve. You should see the angular app successfully compiling to localhost:4200. 
 
 
