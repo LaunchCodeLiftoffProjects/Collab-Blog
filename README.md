@@ -152,4 +152,5 @@ Jump into our Slack! There you will be able to connect with other LaunchCoders
 and work through these challenges together. We encourage you to find a team of people to work with on these 
 features. 
 
+Happy coding!
 
