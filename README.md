@@ -70,7 +70,8 @@ You're making progress! Now let's get you set up locally so that you can start c
 
 
 1. Fork this repository (in the top right corner)
-2. Clone and open the project in IntelliJ
+2. Clone your Forked version to your computer
+3. Open the project in IntelliJ from the Collab-Blog/blog directory 
 
 
 ```
@@ -144,7 +145,7 @@ Etc. Note: This part is a little tricky so reach out to Rachel and John if you a
 
 
 1. If you haven't already, open a terminal in VS Code and navigate to Collab-Blog/client. This is where your angular app will live. Type ng serve. You should see the angular app successfully compiling to localhost:4200. 
-2. In IntelliJ, run the main application with Spring Boot Run. 
+2. In IntelliJ, run the main application from Collab-Blog/blog with Spring Boot Run. 
 
 ## Community and Contributing
 Jump into our Slack! There you will be able to connect with other LaunchCoders
