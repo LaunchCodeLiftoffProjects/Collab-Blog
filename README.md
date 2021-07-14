@@ -34,7 +34,7 @@ try out a 'good first issue' tag. Beyond that, have fun with it. This is a great
 
 <h1 style="text-align: center;">How To Get Started</h1>
 
-First things first, join the slack channel #open-source-project-work in the LaunchCode Community slack channel. There you'll be surrounded by other LaunchCoders working on this project. Once you do that, send a direct message to Rachel Rolon and John Woolbright letting them know that you're interested in working on the project. 
+First things first, join the Slack channel #open-source-project-work in the LaunchCode Community slack channel. There you'll be surrounded by other LaunchCoders working on this project. Once you do that, send a direct message to Rachel Rolon and John Woolbright letting them know that you're interested in working on the project. 
 
 Next, for this project, you will need MySQL with MySQL Workbench, Java 13, Node, Terminal and Angular installed locally. 
 
