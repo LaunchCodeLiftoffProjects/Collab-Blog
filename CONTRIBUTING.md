@@ -6,7 +6,7 @@ Before you begin:
 - Join the Slack channel [#open-source-project-work](https://launchcodecommunity.slack.com/archives/C01AX72T5TM) in the LaunchCode Community Slack Workspace.
 - Get familiar with working on open source projects with our [Open Source Starter Pack](https://github.com/LaunchCodeLiftoffProjects/open-source-starter-pack)
 - Have you read the Collab-Blog [README](README.md)?
-- Have you read the Collab Blog [code of conduct](CODE_OF_CONDUCT.md)?
+- Have you read the Collab Blog [Code of Conduct](CODE_OF_CONDUCT.md)?
 - Check out the [existing issues](https://github.com/LaunchCodeLiftoffProjects/Collab-Blog/issues)
 
 Before you make your changes, check to see if an [issue exists](https://github.com/github/docs/issues/) already for the change you want to make.
@@ -45,12 +45,10 @@ Now that you're a part of the Collab-Blog community, you can keep participating 
 - [Starting with an issue](#starting-with-an-issue)
   - [Labels](#labels)
 - [Opening a pull request](#opening-a-pull-request)
-- [Working in the github/docs repository](#working-in-the-githubdocs-repository)
 - [Reviewing](#reviewing)
   - [Self review](#self-review)
   - [Pull request template](#pull-request-template)
   - [Suggested changes](#suggested-changes)
-- [Windows](#windows)
 
 
 
@@ -63,12 +61,6 @@ Labels can help you find an issue you'd like to help with. Find out what lables 
 ## Opening a pull request
 You can use the GitHub user interface :pencil2: for some small changes, like fixing a typo or updating a readme. You can also fork the repo and then clone it locally, to view changes and run your tests on your machine.
 
-## Working in the github/docs repository
-Here's some information that might be helpful while working on a Docs PR:
-
-- The[README](/README.md) has most of the info on how to get started.  Want to add something? Make an issue
-
-///
 
 ## Reviewing
 We review every single PR.
