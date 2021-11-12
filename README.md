@@ -48,7 +48,7 @@ We're here to help. If you're one of our students who completed CoderGirl's Web 
 - [Node](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-node.html) (Also installs NPM cli)
 - [Terminal](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-terminal.html)
 - [MySQL with MySQL Workbench](https://education.launchcode.org/java-web-development/appendices/software/sql-install.html)
-- [Java](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/index.html)
+- [Java](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/setup.html)
 - [Angular](https://education.launchcode.org/intro-to-professional-web-dev/chapters/angular-lsn1/file-structure.html#installing-angular)
 
 #### Optional Installations
