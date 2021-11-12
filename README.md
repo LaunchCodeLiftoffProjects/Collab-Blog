@@ -82,7 +82,7 @@ Note: If your project is not indexing, you can trouble shoot with these steps. W
 <h3 style="text-align: center;">Java and MySQL Setup</h3>
 
 
-1. Click setup Java JDK and choose Java 13
+1.  In IntelliJ, set up the Java JDK and choose Java 13. [Documentation on setting up JDK](https://www.jetbrains.com/help/idea/sdk.html)
 2.  Open MySQL Workbench. You can view this video for a helpful walkthrough of a similar project: [Setting up a Persistent Database](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html)
 3.  Create a new connection. Make sure to name your connection **localhost**
 4.  Create a schema called collab_blog
