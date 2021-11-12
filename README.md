@@ -47,14 +47,14 @@ We're here to help. If you're one of our students who completed CoderGirl's Web 
 ## Installations
 - [Node](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-node.html) (Also installs NPM cli)
 - [Terminal](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-terminal.html)
-- [MySQL with MySQL Workbench](https://education.launchcode.org/java-web-development/appendices/sql-install.html)
+- [MySQL with MySQL Workbench](https://education.launchcode.org/java-web-development/appendices/software/sql-install.html)
 - [Java](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/index.html)
 - [Angular](https://education.launchcode.org/intro-to-professional-web-dev/chapters/angular-lsn1/file-structure.html#installing-angular)
 
 #### Optional Installations
 You are welcome to use any code editor that you prefer, but we highly recommend you use Visual Studio Code when working with Angular and IntelliJ when working with Spring Boot. 
 - [Visual Studio Code](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-vsc.html)
-- [IntelliJ](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/setup.html#install-the-jdk)
+- [IntelliJ](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/intellij.html)
 
 
 <h3 style="text-align: center;">Take a little break, you've made it through a lot!</h3>
