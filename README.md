@@ -47,14 +47,14 @@ We're here to help. If you're one of our students who completed CoderGirl's Web 
 ## Installations
 - [Node](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-node.html) (Also installs NPM cli)
 - [Terminal](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-terminal.html)
-- [MySQL with MySQL Workbench](https://education.launchcode.org/java-web-development/appendices/sql-install.html)
-- [Java](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/index.html)
+- [MySQL with MySQL Workbench](https://education.launchcode.org/java-web-development/appendices/software/sql-install.html)
+- [Java](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/setup.html)
 - [Angular](https://education.launchcode.org/intro-to-professional-web-dev/chapters/angular-lsn1/file-structure.html#installing-angular)
 
 #### Optional Installations
 You are welcome to use any code editor that you prefer, but we highly recommend you use Visual Studio Code when working with Angular and IntelliJ when working with Spring Boot. 
 - [Visual Studio Code](https://education.launchcode.org/intro-to-professional-web-dev/appendices/installing-software/setting-up-vsc.html)
-- [IntelliJ](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/setup.html#install-the-jdk)
+- [IntelliJ](https://education.launchcode.org/java-web-development/chapters/introduction-and-setup/intellij.html)
 
 
 <h3 style="text-align: center;">Take a little break, you've made it through a lot!</h3>
@@ -82,7 +82,7 @@ Note: If your project is not indexing, you can trouble shoot with these steps. W
 <h3 style="text-align: center;">Java and MySQL Setup</h3>
 
 
-1. Click setup Java JDK and choose Java 13
+1.  In IntelliJ, set up the Java JDK and choose Java 13. [Documentation on setting up JDK](https://www.jetbrains.com/help/idea/sdk.html)
 2.  Open MySQL Workbench. You can view this video for a helpful walkthrough of a similar project: [Setting up a Persistent Database](https://education.launchcode.org/java-web-development/chapters/orm-part1/background.html)
 3.  Create a new connection. Make sure to name your connection **localhost**
 4.  Create a schema called collab_blog
