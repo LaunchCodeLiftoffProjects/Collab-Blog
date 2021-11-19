@@ -17,6 +17,8 @@ export class AddBlogComponent implements OnInit {
 
   selectedFile: File
 
+  fileLabel: String = "Choose File"
+
   ngOnInit(): void {
     this.reactiveForm();
     
@@ -42,6 +44,7 @@ export class AddBlogComponent implements OnInit {
   onFileChanged(event) {
     this.selectedFile = event.target.files[0]
     this.blogForm.get("image").setValue(this.selectedFile);
+    this.fileLabel = this.selectedFile.name;
   }
 
 }
