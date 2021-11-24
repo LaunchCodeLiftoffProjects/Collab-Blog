@@ -21,7 +21,7 @@ public class Blog {
 
 	public Blog(String header, String subheader, String image, String body){
 		this.header = header;
-		this.subheader =subheader;
+		this.subheader = subheader;
 		this.image = image;
 		this.body = body;
 	}
