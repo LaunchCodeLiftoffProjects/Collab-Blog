@@ -4,12 +4,15 @@ import com.amazonaws.services.s3.transfer.model.UploadResult;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.launchcode.blog.S3.S3Service;
+import org.launchcode.blog.tags.Tag;
+import org.launchcode.blog.tags.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +26,9 @@ public class BlogController {
 	
 	@Autowired
 	private BlogRepository blogRepository;
+
+	@Autowired
+	private TagRepository tagRepository;
 	
 	@Autowired
 	private S3Service S3Service;
@@ -47,6 +53,7 @@ public class BlogController {
 			e.printStackTrace();
 		}
 		return blogRepository.save(blog);
+
 	}
 
 	@GetMapping("/blogs/{id}")
