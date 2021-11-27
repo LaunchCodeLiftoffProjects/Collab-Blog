@@ -26,7 +26,6 @@ export class AddBlogComponent implements OnInit {
     
   }
   createBlog(blog:any){
-    console.log(blog);
     this.blogService.addBlog(blog).subscribe(
       response => {
         console.log(response)
