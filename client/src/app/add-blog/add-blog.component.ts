@@ -36,6 +36,7 @@ export class AddBlogComponent implements OnInit {
     this.blogForm=this.fb.group({
       header:[''],
       subheader:[''],
+      author:[''],
       image:[''],
       body:['']
     })

@@ -12,6 +12,7 @@ public class Blog {
 	private long id;
 	private String header;
 	private String subheader;
+	private String author;
 	private String image;
 	@Column(length = 10000)
 	private String body;
@@ -19,7 +20,7 @@ public class Blog {
 	
 	public Blog(){}
 
-	public Blog(String header, String subheader, String image, String body){
+	public Blog(String header, String subheader, String author, String image, String body){
 		this.header = header;
 		this.subheader = subheader;
 		this.image = image;
@@ -45,7 +46,15 @@ public class Blog {
 	public void setHeader(String header) {
 		this.header = header;
 	}
-	
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
 	public String getSubheader() {
 		return subheader;
 	}
@@ -78,6 +87,7 @@ public class Blog {
 				       "id=" + id +
 				       ", header='" + header + '\'' +
 				       ", subheader='" + subheader + '\'' +
+				       ", author='" + author + '\'' +
 				       ", image='" + image + '\'' +
 				       ", body='" + body + '\'' +
 				       ", timestamp=" + timestamp +

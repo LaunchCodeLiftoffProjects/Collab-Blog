@@ -1,41 +1,82 @@
-
 <div class="d-flex justify-content-center">
-    <div class="card" style="width: 50rem;">
-        <img src="https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/anatomy-of-a-blog-post-deconstructed-open-graph.jpg" class="card-img-top" alt="...">
-        <br/>
-        <h1 class="text-center">Add your blog!</h1>
-        <br>
-        <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
-            <div class="form-group container">
-                <label for="header">Header</label>
-                <input type="text" class="form-control" id="header" placeholder="My Unconventional Path to Tech" formControlName="header">
-                <br/>
-                <br/>
-                <label for="subheader">Subheader</label>
-                <input type="text" class="form-control" id="subheader" placeholder="There are many paths to becoming an engineer" formControlName="subheader">
-                <br/>
-                <br/>
-                <label for="body">Body</label>
-                <textarea class="form-control" id="body" rows="15" formControlName="body"></textarea>
-                <br/>
-                <br/>
-                <div class="input-group">
-                    <img src="https://image.flaticon.com/icons/svg/2878/2878855.svg" class="btn btn-circle btn-xl btn-outline-secondary" alt="...">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon04" accept="image/*" (change)="onFileChanged($event)"><br>
-                        <label class="custom-file-label" for="image">{{fileLabel}}</label>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-outline-info">Submit:</button>
-                </div>
-              </div>
-            <br/>
-            <br/>
-            <br/>
-        </form>
-    </div>
+  <div class="card" style="width: 50rem">
+    <img
+      src="https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/anatomy-of-a-blog-post-deconstructed-open-graph.jpg"
+      class="card-img-top"
+      alt="..."
+    />
+    <br />
+    <h1 class="text-center">Add your blog!</h1>
+    <br />
+    <form [formGroup]="blogForm" (ngSubmit)="createBlog(blogForm.value)">
+      <div class="form-group container">
+        <label for="header">Header</label>
+        <input
+          type="text"
+          class="form-control"
+          id="header"
+          placeholder="My Unconventional Path to Tech"
+          formControlName="header"
+        />
+        <br />
+        <br />
+        <label for="subheader">Subheader</label>
+        <input
+          type="text"
+          class="form-control"
+          id="subheader"
+          placeholder="There are many paths to becoming an engineer"
+          formControlName="subheader"
+        />
+        <br />
+        <br />
+        <label for="subheader">Author</label>
+        <input
+          type="text"
+          class="form-control"
+          id="author"
+          placeholder="Your name here"
+          formControlName="author"
+        />
+        <br />
+        <br />
+        <label for="body">Body</label>
+        <textarea
+          class="form-control"
+          id="body"
+          rows="15"
+          formControlName="body"
+        ></textarea>
+        <br />
+        <br />
+        <div class="input-group">
+          <img
+            src="https://image.flaticon.com/icons/svg/2878/2878855.svg"
+            class="btn btn-circle btn-xl btn-outline-secondary"
+            alt="..."
+          />
+          <div class="custom-file">
+            <input
+              type="file"
+              class="custom-file-input"
+              id="image"
+              aria-describedby="inputGroupFileAddon04"
+              accept="image/*"
+              (change)="onFileChanged($event)"
+            /><br />
+            <label class="custom-file-label" for="image">{{ fileLabel }}</label>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-outline-info">Submit:</button>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+    </form>
+  </div>
 </div>
-<br/>
-<br/>
-<br/>
+<br />
+<br />
+<br />
