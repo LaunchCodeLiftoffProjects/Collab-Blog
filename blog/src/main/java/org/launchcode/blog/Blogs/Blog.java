@@ -1,8 +1,15 @@
 package org.launchcode.blog.Blogs;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.launchcode.blog.tags.Tag;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Blog {
@@ -17,6 +24,8 @@ public class Blog {
 	@Column(length = 10000)
 	private String body;
 	private Date timestamp;
+	@ManyToMany(cascade = CascadeType.PERSIST)
+	private final List<Tag> tags = new ArrayList<>();
 	
 	public Blog(){}
 
@@ -79,8 +88,14 @@ public class Blog {
 		this.timestamp = timestamp;
 	}
 
+	public List<Tag> getTags() {
+		return tags;
+	}
 
-	
+	public void addTag(Tag tag){
+		this.tags.add(tag);
+	}
+
 	@Override
 	public String toString() {
 		return "Blog{" +

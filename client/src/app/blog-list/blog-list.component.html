@@ -24,6 +24,7 @@
           <div style="height: 15rem" class="overflow-auto">
             {{ blog.body }}
           </div>
+            <span *ngFor="let tag of blog.tags">{{'#' + tag.name + ' '}}</span>
           <p class="card-text">
             <small class="text-muted">{{ blog.timestamp }}</small>
           </p>

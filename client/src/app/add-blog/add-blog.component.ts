@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BlogsService } from '../service/blogs.service';
 import {FormGroup, FormBuilder} from '@angular/forms';
@@ -18,6 +18,8 @@ export class AddBlogComponent implements OnInit {
   selectedFile: File
 
   fileLabel: String = "Choose File"
+  @ViewChild('tag', {static:true}) tagInput: ElementRef;
+  tags: String[] = []
 
   ngOnInit(): void {
     this.reactiveForm();
@@ -38,7 +40,8 @@ export class AddBlogComponent implements OnInit {
       subheader:[''],
       author:[''],
       image:[''],
-      body:['']
+      body:[''],
+      tags:['']
     })
   }
 
@@ -46,6 +49,19 @@ export class AddBlogComponent implements OnInit {
     this.selectedFile = event.target.files[0]
     this.blogForm.get("image").setValue(this.selectedFile);
     this.fileLabel = this.selectedFile.name;
+  }
+  addTag(event){
+    //removes # from tags if present and adds them to the form for submission
+    event.preventDefault();
+    let tag: string =this.tagInput.nativeElement.value;
+    if(tag.startsWith('#')){
+      tag = tag.substring(1);
+    }
+    if(!this.tags.includes(tag)){
+      this.tags.push(tag);
+    }
+    this.tagInput.nativeElement.value = "";
+    this.blogForm.patchValue({tags: this.tags});
   }
 
 }
