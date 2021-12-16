@@ -47,38 +47,29 @@
                 <!-- User warnings -->
                 <br />
                 <br />
-                <div>
-                    Form Status:
-                </div>
-                <div class="d-flex justify-content-center">
-                    <!-- Header Alert -->
-                    <div class="alert">
-                        <div *ngIf="!blogForm.controls['header'].value">
-                            A Header is required for submission
+
+                <div id="missing-content" *ngIf="blogForm.status=='INVALID'">
+                    <h3 style="text-align: center;">Missing Required:</h3>
+                    <div class="d-flex justify-content-center" >
+                        <!-- Header Alert -->
+                        <div class="alert">
+                            <div *ngIf="!blogForm.controls['header'].value">Header</div>
                         </div>
-                    </div>
-                    <!-- Subheader Alert -->
-                    <div class="alert">
-                        <div *ngIf="!blogForm.controls['subheader'].value">
-                            A Subheader is required for submission
+                        <!-- Subheader Alert -->
+                        <div class="alert">
+                            <div *ngIf="!blogForm.controls['subheader'].value">Subheader</div>
+                        </div>                    
+                        <!-- Author Alert -->
+                        <div class="alert">
+                            <div *ngIf="!blogForm.controls['author'].value">Author</div>
                         </div>
-                    </div>                    
-                    <!-- Author Alert -->
-                    <div class="alert">
-                        <div *ngIf="!blogForm.controls['author'].value">
-                            An Author is required for submission
+                        <!-- Body Alert -->
+                        <div class="alert">
+                            <div *ngIf="!blogForm.controls['body'].value">Body</div>
                         </div>
-                    </div>
-                    <!-- Body Alert -->
-                    <div class="alert">
-                        <div *ngIf="!blogForm.controls['body'].value">
-                            A Body is required for submission
-                        </div>
-                    </div>
-                    <!-- Image Alert -->
-                    <div class="alert">
-                        <div *ngIf="!blogForm.controls['image'].value">
-                            An image is required for submission
+                        <!-- Image Alert -->
+                        <div class="alert">
+                            <div *ngIf="!blogForm.controls['image'].value">Image</div>
                         </div>
                     </div>
                 </div>
