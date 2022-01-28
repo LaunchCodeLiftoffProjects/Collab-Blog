@@ -16,4 +16,4 @@ jobs:
         with:
           project: Collab Blog 
           column: In Progress
-          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repo-token: ${{ secrets.COLLAB_BLOG_PAT }}
