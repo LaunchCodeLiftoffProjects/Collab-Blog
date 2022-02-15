@@ -6,8 +6,7 @@
 name: Move assigned card
 on:
   issues:
-    types:
-      - assigned
+    types:[assigned]
 jobs:
   move-assigned-card:
     runs-on: ubuntu-latest
@@ -16,4 +15,4 @@ jobs:
         with:
           project: Collab Blog 
           column: In Progress
-          repo-token: ${{ secrets.COLLAB_BLOG_PAT }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
