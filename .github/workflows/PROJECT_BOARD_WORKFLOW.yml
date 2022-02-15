@@ -6,7 +6,8 @@
 name: Move assigned card
 on:
   issues:
-    types:[assigned]
+    types:
+      - assigned
 jobs:
   move-assigned-card:
     runs-on: ubuntu-latest
