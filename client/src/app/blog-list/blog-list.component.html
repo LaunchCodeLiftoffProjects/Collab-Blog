@@ -8,29 +8,31 @@
 <div class="row row-cols-1 row-cols-md-3">
   <div *ngFor="let blog of blogs">
     <div class="col mb-4">
-      <a routerLink="/view-blog" routerLinkActive="active">
-              <div class="card">
-        <img
-          src="{{ blog.image }}"
-          class="card-img-top"
-          style="height: 15rem"
-          alt="..."
-        />
-        <div class="card-body">
-          <h2 class="card-title">{{ blog.header }}</h2>
-          <h3 class="card-subtitle mb-2 text-muted">{{ blog.subheader }}</h3>
-          <h6 class="card-subtitle mb-2 text-uppercase">
-            By {{ blog.author }}
-          </h6>
-          <div style="height: 15rem" class="overflow-auto">
-            {{ blog.body }}
+      <!-- Pass parameter to the route -->
+      <!-- Replace '1' with the routeID -->
+      <a [routerLink]="['/view-blog', blog.id]" routerLinkActive="active">
+        <div class="card">
+          <img
+            src="{{ blog.image }}"
+            class="card-img-top"
+            style="height: 15rem"
+            alt="..."
+          />
+          <div class="card-body">
+            <h2 class="card-title">{{ blog.header }}</h2>
+            <h3 class="card-subtitle mb-2 text-muted">{{ blog.subheader }}</h3>
+            <h6 class="card-subtitle mb-2 text-uppercase">
+              By {{ blog.author }}
+            </h6>
+            <div style="height: 15rem" class="overflow-auto">
+              {{ blog.body }}
+            </div>
+              <span *ngFor="let tag of blog.tags">{{'#' + tag.name + ' '}}</span>
+            <p class="card-text">
+              <small class="text-muted">{{ blog.timestamp }}</small>
+            </p>
           </div>
-            <span *ngFor="let tag of blog.tags">{{'#' + tag.name + ' '}}</span>
-          <p class="card-text">
-            <small class="text-muted">{{ blog.timestamp }}</small>
-          </p>
         </div>
-      </div>
       </a>
 
     </div>

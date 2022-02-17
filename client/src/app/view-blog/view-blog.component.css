@@ -1,0 +1,6 @@
+.view-blog-container {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    text-align: center;
+    
+}

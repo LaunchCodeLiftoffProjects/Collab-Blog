@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: "blog-list", component: BlogListComponent },
   {path: "add-blog", component: AddBlogComponent },
   {path: "welcome", component: WelcomePageComponent },
-  {path: "view-blog", component: ViewBlogComponent}
+  {path: "view-blog/:id", component: ViewBlogComponent}
 ];
 
 @NgModule({

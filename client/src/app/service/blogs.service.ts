@@ -25,6 +25,13 @@ export class BlogsService {
     return this.http.get('//localhost:8080/blogs');
   }
 
+  //Selects a blog by Id - Part of Issue 27
+  getBlog(id:any): Observable<any> {
+    let blogs = this.getAll();
+    let blog:Observable<any> = blogs;
+    return blog;
+  }
+
   addBlog(blog:any): Observable<any>{
   
       const formData = new FormData();
@@ -34,6 +41,5 @@ export class BlogsService {
       formData.append("blogData", blogData);
       return this.http.post('//localhost:8080/blogs', formData);
     }
-
 
 }
