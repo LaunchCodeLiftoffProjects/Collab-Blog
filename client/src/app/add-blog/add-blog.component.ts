@@ -26,6 +26,7 @@ export class AddBlogComponent implements OnInit {
     this.reactiveForm();
     
   }
+  
   createBlog(blog:any){
     this.blogService.addBlog(blog).subscribe(
       response => {
@@ -51,6 +52,7 @@ export class AddBlogComponent implements OnInit {
     this.blogForm.get("image").setValue(this.selectedFile);
     this.fileLabel = this.selectedFile.name;
   }
+ 
   addTag(event){
     //removes # from tags if present and adds them to the form for submission
     event.preventDefault();
