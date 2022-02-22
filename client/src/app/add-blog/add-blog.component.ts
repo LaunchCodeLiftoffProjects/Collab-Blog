@@ -1,8 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BlogsService } from '../service/blogs.service';
-import {FormGroup, FormBuilder} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { mixinColor } from '@angular/material/core';
 
 @Component({
   selector: 'app-add-blog',
@@ -36,11 +37,11 @@ export class AddBlogComponent implements OnInit {
 
   reactiveForm(){
     this.blogForm=this.fb.group({
-      header:[''],
-      subheader:[''],
-      author:[''],
-      image:[''],
-      body:[''],
+      header:['', Validators.required],
+      subheader:['', Validators.required],
+      author:['', Validators.required],
+      image:['', Validators.required],
+      body:['', Validators.required],
       tags:['']
     })
   }

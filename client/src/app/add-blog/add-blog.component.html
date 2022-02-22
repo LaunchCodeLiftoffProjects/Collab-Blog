@@ -17,7 +17,7 @@
                     placeholder="There are many paths to becoming an engineer" formControlName="subheader">
                 <br />
                 <br />
-                <label for="subheader">Author</label>
+                <label for="author">Author</label>
                 <input
                   type="text"
                    class="form-control"
@@ -52,10 +52,40 @@
                         <label class="custom-file-label" for="image">{{fileLabel}}</label>
                     </div>
                 </div>
+                <!-- User warnings -->
+                <br />
+                <br />
+                <div id="missing-content" *ngIf="blogForm.status=='INVALID'">
+                    <h3 style="text-align: center;">Missing Required:</h3>
+                    <div class="d-flex justify-content-center" >
+                        <!-- Header Alert -->
+                        <div class="alert">
+                            <div *ngIf="!blogForm.controls['header'].value">Header</div>
+                        </div>
+                    <!-- Subheader Alert -->
+                    <div class="alert">
+                        <div *ngIf="!blogForm.controls['subheader'].value">Subheader</div>
+                    </div>                    
+                    <!-- Author Alert -->
+                    <div class="alert">
+                        <div *ngIf="!blogForm.controls['author'].value">Author</div>
+                        </div>
+                    </div>
+                     <!-- Body Alert -->
+                     <div class="alert">
+                        <div *ngIf="!blogForm.controls['body'].value">Body</div>
+                        </div>
+                      <!-- Image Alert -->
+                      <div class="alert">
+                        <div *ngIf="!blogForm.controls['image'].value">Image</div>
+                        </div>
+                    </div>
+            </div>
+
+            <br />
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-outline-info">Submit:</button>
                 </div>
-            </div>
             <br />
             <br />
             <br />
