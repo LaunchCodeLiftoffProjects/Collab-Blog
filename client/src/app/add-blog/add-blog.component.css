@@ -24,7 +24,6 @@
     text-align: center; 
 } 
 
-
 /* Angular Forms Control Status Classes */
 .ng-valid[required], .ng-valid.required  {
   border-left: 5px solid #42A948; /* green */
@@ -53,4 +52,4 @@ label {
 select {
   width: 100%;
   padding: .5rem;
-} 
+}
