@@ -8,8 +8,6 @@
 <div class="row row-cols-1 row-cols-md-3">
   <div *ngFor="let blog of blogs">
     <div class="col mb-4">
-      <!-- Pass parameter to the route -->
-      <!-- Replace '1' with the routeID -->
       <a [routerLink]="['/view-blog', blog.id]" routerLinkActive="active">
         <div class="card">
           <img

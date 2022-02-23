@@ -25,11 +25,8 @@ export class BlogsService {
     return this.http.get('//localhost:8080/blogs');
   }
 
-  //Selects a blog by Id - Part of Issue 27
-  getBlog(id:any): Observable<any> {
-    let blogs = this.getAll();
-    let blog:Observable<any> = blogs;
-    return blog;
+  getBlogById(id:String): Observable<any> {
+    return this.http.get('//localhost:8080/blogs/'+ id);
   }
 
   addBlog(blog:any): Observable<any>{
