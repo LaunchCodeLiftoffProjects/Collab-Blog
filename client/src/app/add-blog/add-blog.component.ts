@@ -10,15 +10,15 @@ import { mixinColor } from '@angular/material/core';
   templateUrl: './add-blog.component.html',
   styleUrls: ['./add-blog.component.css']
 })
+
 export class AddBlogComponent implements OnInit {
   
-
   blogForm:FormGroup;
   constructor(private blogService:BlogsService, private fb:FormBuilder, private router:Router) { }
 
-  selectedFile: File
-
-  fileLabel: String = "Choose File"
+  selectedFile: File;
+  @ViewChild('imageInput') imageInputVariable: ElementRef;
+  // fileLabel: String = "Choose File";
   @ViewChild('tag', {static:true}) tagInput: ElementRef;
   tags: String[] = []
 
@@ -41,16 +41,27 @@ export class AddBlogComponent implements OnInit {
       header:['', Validators.required],
       subheader:['', Validators.required],
       author:['', Validators.required],
-      image:['', Validators.required],
+      image:[''],
       body:['', Validators.required],
       tags:['']
     })
   }
 
+  resetFileName(){
+    console.log(this.imageInputVariable.nativeElement.files);
+    this.imageInputVariable.nativeElement.value = "";
+    console.log(this.imageInputVariable.nativeElement.files);
+  }
+
   onFileChanged(event) {
-    this.selectedFile = event.target.files[0]
+    this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile);
     this.blogForm.get("image").setValue(this.selectedFile);
-    this.fileLabel = this.selectedFile.name;
+    console.log(this.imageInputVariable);
+    // if(this.selectedFile.name == ""){
+    //   this.resetFileName();
+    // }
+    // this.fileLabel = this.selectedFile.name;
   }
  
   addTag(event){
