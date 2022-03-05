@@ -38,9 +38,9 @@
                 <div class="input-group">
                     <img src="https://image.flaticon.com/icons/svg/2878/2878855.svg" class="btn btn-circle btn-xl btn-outline-secondary" alt="...">
                     <div class="custom-file">
-                        <label *ngIf="blogForm.controls['image'].value.name; else elseBlock" class="custom-file-label" for="image">{{selectedFile.name}}</label>
+                        <label *ngIf="selectedFile != undefined; else elseBlock" class="custom-file-label" for="image">{{selectedFile.name}}</label>
                         <ng-template #elseBlock><label class="custom-file-label" for="image">Choose File</label></ng-template>
-                        <input #imageInput type="file" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon04"
+                        <input type="file" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon04"
                         accept="image/*" (change)="onFileChanged($event)"><br>
                     </div>
                 </div>
