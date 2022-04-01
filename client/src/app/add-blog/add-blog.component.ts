@@ -18,8 +18,8 @@ export class AddBlogComponent implements OnInit {
   
   selectedFile: File | undefined;
   
-  @ViewChild('tag', {static:true}) tagInput: ElementRef;
-  tags: String[] = []
+  // @ViewChild('tag', {static:true}) tagInput: ElementRef;
+  // tags: String[] = []
   
   ngOnInit(): void {
     this.reactiveForm();
@@ -42,7 +42,7 @@ export class AddBlogComponent implements OnInit {
         author:['', Validators.required],
         image:[''],
         body:['', Validators.required],
-        tags:['']
+        //tags:['']
       })
     }
     
@@ -52,19 +52,19 @@ export class AddBlogComponent implements OnInit {
         this.blogForm.get("image").setValue(this.selectedFile);
     }
     
-    addTag(event){
-      //removes # from tags if present and adds them to the form for submission
-      event.preventDefault();
-      let tag: string =this.tagInput.nativeElement.value;
-      if(tag.startsWith('#')){
-        tag = tag.substring(1);
-      }
-      if(!this.tags.includes(tag)){
-        this.tags.push(tag);
-      }
-      this.tagInput.nativeElement.value = "";
-      this.blogForm.patchValue({tags: this.tags});
-    }
+    // addTag(event){
+    //   //removes # from tags if present and adds them to the form for submission
+    //   event.preventDefault();
+    //   let tag: string =this.tagInput.nativeElement.value;
+    //   if(tag.startsWith('#')){
+    //     tag = tag.substring(1);
+    //   }
+    //   if(!this.tags.includes(tag)){
+    //     this.tags.push(tag);
+    //   }
+    //   this.tagInput.nativeElement.value = "";
+    //   this.blogForm.patchValue({tags: this.tags});
+    // }
     
   }
   
