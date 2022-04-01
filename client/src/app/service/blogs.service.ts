@@ -25,6 +25,10 @@ export class BlogsService {
     return this.http.get('//localhost:8080/blogs');
   }
 
+  getBlogById(id:String): Observable<any> {
+    return this.http.get('//localhost:8080/blogs/'+ id);
+  }
+
   addBlog(blog:any): Observable<any>{
   
       const formData = new FormData();
@@ -34,6 +38,5 @@ export class BlogsService {
       formData.append("blogData", blogData);
       return this.http.post('//localhost:8080/blogs', formData);
     }
-
 
 }

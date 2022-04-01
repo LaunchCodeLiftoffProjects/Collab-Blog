@@ -14,7 +14,7 @@ public class BlogTestsUtil {
 	private BlogRepository blogRepository;
 	
 	public void setup(){
-		Blog blog = new Blog("First Blog", "My very first blog", "http://www.test.com", "This is my body");
+		Blog blog = new Blog("First Blog", "My very first blog", "I am the author", "http://www.test.com", "This is my body");
 		blogRepository.save(blog);
 	}
 	

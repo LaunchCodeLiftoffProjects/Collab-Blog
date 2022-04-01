@@ -18,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ViewBlogComponent } from './view-blog/view-blog.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     AddBlogComponent,
     NavbarComponent,
     WelcomePageComponent,
+    ViewBlogComponent,
     
   ],
   imports: [
