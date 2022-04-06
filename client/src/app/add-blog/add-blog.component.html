@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
     <div class="card" style="width: 50rem;">
         <img src="https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/anatomy-of-a-blog-post-deconstructed-open-graph.jpg"
-        class="card-img-top" alt="...">
+          class="card-img-top" alt="...">
         <br />
         <h1 class="text-center">Add your blog!</h1>
         <br>
@@ -13,7 +13,7 @@
                 <br />
                 <label for="subheader">Subheader</label>
                 <input type="text" class="form-control" id="subheader"
-                placeholder="There are many paths to becoming an engineer" formControlName="subheader">
+                  placeholder="There are many paths to becoming an engineer" formControlName="subheader">
                 <br />
                 <br />
                 <label for="author">Author</label>
@@ -24,30 +24,29 @@
                 <textarea class="form-control" id="body" rows="15" formControlName="body"></textarea>
                 <br />
                 <br />
-                <label for="tag">Tags</label>
+                <!-- <label for="tag">Tags</label>
                 <div class="input-group">
                     <input #tag type="text" class="form-control" id="tag" (keydown.enter)="addTag($event)" placeholder="Add one at a time"><button type="button" (click)="addTag($event)"
                         class="btn btn-circle btn-outline-secondary">Add</button>
                     <br />
                     <input type="hidden" class="form-control" formControlName="tags" id="tags" [value]="tags.toString()">                       
                 </div>
-                <span *ngFor="let tag of tags">{{'#' + tag + ' '}}</span>
+                <span *ngFor="let tag of tags">{{'#' + tag + ' '}}</span> -->
                 <br />
                 <br />
 
                 <div class="input-group">
                     <img src="https://image.flaticon.com/icons/svg/2878/2878855.svg" class="btn btn-circle btn-xl btn-outline-secondary" alt="...">
                     <div class="custom-file">
-                        <label *ngIf="blogForm.controls['image'].value.name; else elseBlock" class="custom-file-label" for="image">{{blogForm.controls['image'].value.name}}</label>
+                        <label *ngIf="selectedFile != undefined; else elseBlock" class="custom-file-label" for="image">{{selectedFile.name}}</label>
                         <ng-template #elseBlock><label class="custom-file-label" for="image">Choose File</label></ng-template>
                         <input type="file" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon04"
-                        accept="image/*" (change)="onFileChanged($event)" formControlName="image"><br>
+                        accept="image/*" (change)="onFileChanged($event)"><br>
                     </div>
                 </div>
                 <!-- User warnings -->
                 <br />
                 <br />
-
                 <div id="missing-content" *ngIf="blogForm.status=='INVALID'">
                     <h3 style="text-align: center;">Missing Required:</h3>
                     <div class="d-flex justify-content-center" >
