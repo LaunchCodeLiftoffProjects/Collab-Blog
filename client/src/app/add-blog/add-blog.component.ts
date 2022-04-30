@@ -42,7 +42,7 @@ export class AddBlogComponent implements OnInit {
         author:['', Validators.required],
         image:[''],
         body:['', Validators.required],
-        tags:['']
+        tags:[[]]
       })
     }
     
@@ -59,7 +59,7 @@ export class AddBlogComponent implements OnInit {
       if(tag.startsWith('#')){
         tag = tag.substring(1);
       }
-      if(!this.tags.includes(tag)){
+      if(!this.tags.includes(tag) && tag !== ''){
         this.tags.push(tag);
       }
       this.tagInput.nativeElement.value = "";
