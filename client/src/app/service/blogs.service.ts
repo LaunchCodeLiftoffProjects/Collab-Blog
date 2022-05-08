@@ -38,5 +38,20 @@ export class BlogsService {
       formData.append("blogData", blogData);
       return this.http.post('//localhost:8080/blogs', formData);
     }
+  
+  updateBlog(blog:any, id:String): Observable<any>{
+  
+      const formData = new FormData();
+      formData.append("image", blog.image);
+      console.log("Testing output of blog image", blog.image);
+      delete blog.image;
+      let blogData = JSON.stringify(blog);
+      formData.append("blogData", blogData);
+      return this.http.put('//localhost:8080/blogs/' +id, formData);
+    }
+    
+  deleteBlog(id:String): Observable<any>{
+      return this.http.delete('//localhost:8080/blogs/' +id);
+  }
 
 }
