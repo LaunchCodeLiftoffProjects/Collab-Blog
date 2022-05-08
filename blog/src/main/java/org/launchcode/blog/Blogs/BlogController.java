@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+
 @CrossOrigin(origins = "*")
 @RestController
 public class BlogController {
@@ -59,6 +60,40 @@ public class BlogController {
 	@GetMapping("/blogs/{id}")
 	public Optional<Blog> getBlogById(@PathVariable("id") long id){
 		return blogRepository.findById(id);
+	}
+	
+	@PutMapping("/blogs/{id}")
+	public Blog updateBlog(@PathVariable("id") long id, @RequestParam("blogData") String blogData, @RequestPart("image") MultipartFile image) throws JsonProcessingException {
+		Blog blog = objectMapper.readValue(blogData, Blog.class);
+		Blog newBlog = new Blog();
+		blog.setTimestamp(new Date());
+		try{
+			UploadResult result = S3Service.uploadImageToS3(image);
+			URL url = S3Service.urlCreationFromAwsUpload(result, image.getOriginalFilename());
+			String urlString = url.toString();
+			blog.setImage(urlString);
+			newBlog = blogRepository.findById(id).get();
+			newBlog.setHeader(blog.getHeader());
+			newBlog.setSubheader(blog.getSubheader());
+			newBlog.setAuthor(blog.getAuthor());
+			newBlog.setTimestamp(blog.getTimestamp());
+			newBlog.setImage(urlString);
+			newBlog.setBody(blog.getBody());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return blogRepository.save(newBlog);
+
+	}
+	
+	@DeleteMapping("/blogs/{id}")
+	public void deleteBlog(@PathVariable("id") long id)
+	{
+		Blog newBlog2 = blogRepository.findById(id).get();
+		blogRepository.deleteById(id);
 	}
 	
 }
