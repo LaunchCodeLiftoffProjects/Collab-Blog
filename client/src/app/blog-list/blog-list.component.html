@@ -8,14 +8,16 @@
 <div class="row row-cols-1 row-cols-md-3">
   <div *ngFor="let blog of blogs">
     <div class="col mb-4">
-      <a [routerLink]="['/view-blog', blog.id]" routerLinkActive="active">
+      
         <div class="card">
+          <a [routerLink]="['/view-blog', blog.id]" routerLinkActive="active">
           <img
             src="{{ blog.image }}"
             class="card-img-top"
             style="height: 15rem"
             alt="..."
           />
+        </a>
           <div class="card-body">
             <h2 class="card-title">{{ blog.header }}</h2>
             <h3 class="card-subtitle mb-2 text-muted">{{ blog.subheader }}</h3>
@@ -29,9 +31,20 @@
             <p class="card-text">
               <small class="text-muted">{{ blog.timestamp }}</small>
             </p>
+            <p class="card-text">
+              <small class="text-muted"><button [routerLink]="['/update-blog', blog.id]" routerLinkActive="active" class="btn btn-outline-info" >Update</button></small>
+            </p>
+            <p class="card-text">
+              <small class="text-muted"><button (click)="deleteBlog(blog.id)" class="btn btn-outline-info" >Delete</button></small>
+            </p>
           </div>
         </div>
-      </a>
+      
+
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>
