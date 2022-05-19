@@ -27,6 +27,7 @@ public class Blog {
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	private final List<Tag> tags = new ArrayList<>();
 	
+	
 	public Blog(){}
 
 	public Blog(String header, String subheader, String author, String image, String body){
@@ -89,12 +90,15 @@ public class Blog {
 	}
 
 	public List<Tag> getTags() {
-		return tags;
+		//return tags;
+		return this.tags;
 	}
 
-	public void addTag(Tag tag){
+	public int addTag(Tag tag){
 		this.tags.add(tag);
+		return this.tags.size();
 	}
+	
 
 	@Override
 	public String toString() {
@@ -105,6 +109,7 @@ public class Blog {
 				       ", author='" + author + '\'' +
 				       ", image='" + image + '\'' +
 				       ", body='" + body + '\'' +
+				       ", tags='" + tags.toString() + '\'' +
 				       ", timestamp=" + timestamp +
 				       '}';
 	}
