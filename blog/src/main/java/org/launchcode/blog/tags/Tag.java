@@ -43,6 +43,45 @@ public class Tag {
         return id;
     }
 
+    public void setId(long w) {
+    	this.id = w;
+    }
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tag tag = (Tag) o;
+        return name.equals(tag.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+    
+    @Override
+	public String toString() {
+		return "Tag{" +
+				       "id=" + id +
+				       ", name='" + name + '\'' +
+				       '}';
+	}
+}
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getId() {
+        return id;
+    }
+
     public List<Blog> getBlogs() {
         return blogs;
     }
