@@ -1,6 +1,7 @@
 <div class="d-flex justify-content-center">
     <div class="card" style="width: 50rem;">
-        <img src="https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/anatomy-of-a-blog-post-deconstructed-open-graph.jpg"
+        <!-- <img src="https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/anatomy-of-a-blog-post-deconstructed-open-graph.jpg" -->
+        <img src={{url}}
         class="card-img-top" alt="...">
         <br />
         <h1 class="text-center">Update your blog!</h1>
@@ -8,20 +9,20 @@
         <form [formGroup]="blogForm" (ngSubmit)="updateBlog(blogForm.value)">
             <div class="form-group container">
                 <label for="header">Header</label>
-                <input type="text" class="form-control" id="header" placeholder="My Unconventional Path to Tech" formControlName="header"/>
+                <input type="text" class="form-control" id="header" placeholder="My Unconventional Path to Tech" [(ngModel)]=blog.header formControlName="header"/>
                 <br />
                 <br />
                 <label for="subheader">Subheader</label>
                 <input type="text" class="form-control" id="subheader"
-                placeholder="There are many paths to becoming an engineer" formControlName="subheader">
+                placeholder="There are many paths to becoming an engineer" [(ngModel)]=blog.subheader formControlName="subheader" >
                 <br />
                 <br />
                 <label for="author">Author</label>
-                <input type="text" class="form-control" id="author" placeholder="Your name here" formControlName="author"/>
+                <input type="text" class="form-control" id="author" placeholder="Your name here" [(ngModel)]=blog.author formControlName="author" />
                 <br />
                 <br />
                 <label for="body">Body</label>
-                <textarea class="form-control" id="body" rows="15" formControlName="body"></textarea>
+                <textarea class="form-control" id="body" rows="15" formControlName="body" [(ngModel)]=blog.body></textarea>
                 <br />
                 <br />
                 <label for="tag">Tags</label>
@@ -31,12 +32,13 @@
                     <br />
                     <input type="hidden" class="form-control" formControlName="tags" id="tags" [value]="tags.toString()">                       
                 </div>
-                <span *ngFor="let tag of tags">{{'#' + tag + ' '}}</span>
+                <span *ngFor="let tag of tags">{{'#' + tag.name + ' '}}</span>
+                <br />
                 <br />
                 <br />
 
-                <div class="input-group">
-                    <img src="https://image.flaticon.com/icons/svg/2878/2878855.svg" class="btn btn-circle btn-xl btn-outline-secondary" alt="...">
+                <div class="input-group" *ngIf="url == null; else elseBlock">
+                    <img src="https://image.flaticon.com/icons/svg/2878/2878855.svg" id="uploadedImage" class="btn btn-circle btn-xl btn-outline-secondary" alt="...">
                     <div class="custom-file">
                         <label *ngIf="selectedFile != undefined; else elseBlock" class="custom-file-label" for="image">{{selectedFile.name}}</label>
                         <ng-template #elseBlock><label class="custom-file-label" for="image">Choose File</label></ng-template>
@@ -44,11 +46,16 @@
                         accept="image/*" (change)="onFileChanged($event)"><br>
                     </div>
                 </div>
+                <ng-template #elseBlock><label >Selected File</label>{{url}}
+                    <button type="button" (click)="changeImage($event)" class="btn btn-circle btn-outline-secondary">Change Image</button>
+                </ng-template>
                 <!-- User warnings -->
                 <br />
                 <br />
+                
                 <div id="missing-content" *ngIf="blogForm.status=='INVALID'">
-                    <h3 style="text-align: center;">Missing Required:</h3>
+                    <h3 *ngIf="!blogForm.controls['header'].value ||!blogForm.controls['subheader'].value || !blogForm.controls['author'].value || !blogForm.controls['body'].value || (!blogForm.controls['image'].value && url==null && url==null)" 
+                    style="text-align: center;">Missing Required:</h3>
                     <div class="d-flex justify-content-center" >
                         <!-- Header Alert -->
                         <div class="alert">
@@ -68,7 +75,7 @@
                         </div>
                         <!-- Image Alert -->
                         <div class="alert">
-                            <div *ngIf="!blogForm.controls['image'].value">Image</div>
+                            <div *ngIf="!blogForm.controls['image'].value && url==null" >Image</div>
                         </div>
                     </div>
                 </div>
@@ -87,5 +94,3 @@
 <br />
 <br />
 <br />
-
-

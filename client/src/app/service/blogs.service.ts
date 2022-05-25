@@ -17,9 +17,7 @@ const httpOptions = {
 export class BlogsService {
 
 
-  constructor(
-    private http:HttpClient
-  ) { }
+  constructor(private http:HttpClient) { }
 
   getAll(): Observable<any> {
     return this.http.get('//localhost:8080/blogs');
@@ -38,8 +36,8 @@ export class BlogsService {
       formData.append("blogData", blogData);
       return this.http.post('//localhost:8080/blogs', formData);
     }
-  
-  updateBlog(blog:any, id:String): Observable<any>{
+
+    updateBlog(blog:any, id:String): Observable<any>{
   
       const formData = new FormData();
       formData.append("image", blog.image);
@@ -48,6 +46,14 @@ export class BlogsService {
       let blogData = JSON.stringify(blog);
       formData.append("blogData", blogData);
       return this.http.put('//localhost:8080/blogs/' +id, formData);
+    }
+
+    updateBlogNoImage(blog:any, id:String): Observable<any>{
+  
+      const formData = new FormData();
+      let blogData = JSON.stringify(blog);
+      formData.append("blogData", blogData);
+      return this.http.put('//localhost:8080/blogsNoImage/' +id, formData);
     }
     
   deleteBlog(id:String): Observable<any>{

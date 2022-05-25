@@ -43,6 +43,9 @@ public class Tag {
         return id;
     }
 
+    public void setId(long w) {
+    	this.id = w;
+    }
     public List<Blog> getBlogs() {
         return blogs;
     }
@@ -60,4 +63,15 @@ public class Tag {
     public int hashCode() {
         return Objects.hash(name);
     }
+    
+    @Override
+	public String toString() {
+		return "Tag{" +
+				       "id=" + id +
+				       ", name='" + name + '\'' +
+				       '}';
+	}
 }
+
+
+  

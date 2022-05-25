@@ -3,6 +3,8 @@ package org.launchcode.blog.Blogs;
 import com.amazonaws.services.s3.transfer.model.UploadResult;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import org.launchcode.blog.S3.S3Service;
 import org.launchcode.blog.tags.Tag;
 import org.launchcode.blog.tags.TagRepository;
@@ -79,6 +81,26 @@ public class BlogController {
 			newBlog.setTimestamp(blog.getTimestamp());
 			newBlog.setImage(urlString);
 			newBlog.setBody(blog.getBody());
+			List<Tag> allTags; 
+			allTags = blog.getTags();
+			System.out.println(allTags);	
+			Tag t = new Tag();
+			
+			//add list of tags
+			for(int i =0; i < allTags.size(); i++)
+			{
+				if (allTags.get(i).getId() == 0) { 
+					System.out.println("adding tag with id: " + allTags.get(i).getId());
+					
+					int q =newBlog.addTag(allTags.get(i));
+					t.setName(allTags.get(i).getName());
+					t.setId(q);
+					tagRepository.save(t);
+					System.out.println("saving to tag repository:"+ t);
+				}
+			}
+					
+			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -89,10 +111,56 @@ public class BlogController {
 
 	}
 	
+	@PutMapping("/blogsNoImage/{id}")
+	public Blog updateBlog(@PathVariable("id") long id, @RequestParam("blogData") String blogData) throws JsonProcessingException {
+		Blog blog = objectMapper.readValue(blogData, Blog.class);
+		Blog newBlog = new Blog();
+		blog.setTimestamp(new Date());
+		try{
+			
+			newBlog = blogRepository.findById(id).get();
+			newBlog.setHeader(blog.getHeader());
+			newBlog.setSubheader(blog.getSubheader());
+			newBlog.setAuthor(blog.getAuthor());
+			newBlog.setTimestamp(blog.getTimestamp());
+			newBlog.setBody(blog.getBody());
+			List<Tag> allTags; 
+			allTags = blog.getTags();
+			System.out.println(allTags);	
+			Tag t = new Tag();
+			
+			//add list of tags
+			for(int i =0; i < allTags.size(); i++)
+			{
+				if (allTags.get(i).getId() == 0) { 
+					System.out.println("adding tag with id: " + allTags.get(i).getId());
+					
+					int q =newBlog.addTag(allTags.get(i));
+					t.setName(allTags.get(i).getName());
+					t.setId(q);
+					tagRepository.save(t);
+					System.out.println("saving to tag repository:"+ t);
+				}
+			}
+					
+			
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+//		catch (InterruptedException e) {
+//			e.printStackTrace();
+//		} 
+//		catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		
+		return blogRepository.save(newBlog);
+
+	}
 	@DeleteMapping("/blogs/{id}")
 	public void deleteBlog(@PathVariable("id") long id)
 	{
-		Blog newBlog2 = blogRepository.findById(id).get();
 		blogRepository.deleteById(id);
 	}
 	
