@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ViewBlogComponent } from './view-blog/view-blog.component';
 import { UpdateBlogComponent } from './update-blog/update-blog.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UpdateBlogComponent } from './update-blog/update-blog.component';
     WelcomePageComponent,
     ViewBlogComponent,
     UpdateBlogComponent,
+    SearchBarComponent,
     
   ],
   imports: [
