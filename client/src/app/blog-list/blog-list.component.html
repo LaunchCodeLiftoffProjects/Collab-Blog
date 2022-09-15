@@ -1,23 +1,27 @@
 <br />
 <br />
 <div class="d-flex justify-content-center">
-  <h1>Your Blogs</h1>
+    <h1>Your Blogs</h1>
 </div>
+<!-- Filter - Convert to separate component in the future-->
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search" #searchTerm/>
+    <button type="button" class="btn btn-primary" (click)="searchBlogs(searchTerm.value)">Filter</button>
+</div>
+<!-- End Filter -->
+
 <br />
 <br />
+
 <div class="row row-cols-1 row-cols-md-3">
-  <div *ngFor="let blog of blogs">
+  <div *ngFor="let blog of displayBlogs">
+
+    <!-- Blog Card - Convert to separate component in the future -->
     <div class="col mb-4">
-      
         <div class="card">
           <a [routerLink]="['/view-blog', blog.id]" routerLinkActive="active">
-          <img
-            src="{{ blog.image }}"
-            class="card-img-top"
-            style="height: 15rem"
-            alt="..."
-          />
-        </a>
+            <img src="{{ blog.image }}" class="card-img-top" style="height: 15rem" alt="..." />
+          </a>
           <div class="card-body">
             <h2 class="card-title">{{ blog.header }}</h2>
             <h3 class="card-subtitle mb-2 text-muted">{{ blog.subheader }}</h3>
@@ -39,8 +43,9 @@
             </p>
           </div>
         </div>
-      
-
     </div>
+    <!-- End Blog Card -->
+
   </div>
 </div>
+
