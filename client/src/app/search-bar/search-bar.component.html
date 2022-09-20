@@ -1,0 +1,6 @@
+<!-- This component is not currently in use but may be used as a later date to house the blog search as a separate component -->
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search" #searchTerm/>
+    <!-- Remove the routerLink if the component becomes a true child of the blog-list component -->
+    <button  type="button" class="btn btn-primary" (click)="blogSearch(searchTerm.value)">Go</button>
+</div>
